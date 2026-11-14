@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pop Fizz: lemon and ginger soda, twelve cans for £14</title>
+<meta name="description" content="Pop Fizz is a lemon and ginger soda in 330ml cans at 39 calories each, sold in boxes of twelve for £14.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&family=Chivo:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hallmark Universal Hub Bar -->
+<div class="hallmark-hub-bar" style="position: relative; z-index: 10000; background-color: var(--color-paper-2, #18181b); color: var(--color-ink, #f4f4f5); border-bottom: 1px solid var(--color-rule, #3f3f46); padding: 8px 16px; font-family: var(--font-body, system-ui, sans-serif); font-size: 13px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <a href="../../index.html" style="font-weight: 600; text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+      <span style="color: var(--color-accent, #eab308);">←</span> <span>Viral Parmar Hub</span>
+    </a>
+    <span style="opacity: 0.35;">|</span>
+    <span>Hallmark Theme Layout: <strong style="color: var(--color-accent, #eab308);">Halftone</strong> (playful)</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <label for="theme-hop-select-halftone" style="font-size: 12px; opacity: 0.8;">Switch Layout:</label>
+    <select id="theme-hop-select-halftone" onchange="if (this.value) window.location.href = '../' + this.value + '/index.html'" style="background: var(--color-paper, #09090b); color: var(--color-ink, #f4f4f5); border: 1px solid var(--color-rule, #3f3f46); border-radius: 4px; padding: 4px 8px; font-size: 12px; cursor: pointer;">
+      <option value="almanac" >Almanac (editorial)</option><option value="arcade" >Arcade (playful)</option><option value="atelier" >Atelier (editorial)</option><option value="bloom" >Bloom (atmospheric)</option><option value="blueprint" >Blueprint (modern-minimal)</option><option value="broadside" >Broadside (editorial)</option><option value="brutal" >Brutal (editorial)</option><option value="carnival" >Carnival (editorial)</option><option value="cobalt" >Cobalt (modern-minimal)</option><option value="console" >Console (modern-minimal)</option><option value="coral" >Coral (modern-minimal)</option><option value="darkroom" >Darkroom (atmospheric)</option><option value="dose" >Dose (modern-minimal)</option><option value="dusk" >Dusk (modern-minimal)</option><option value="editorial" >Editorial (editorial)</option><option value="formwork" >Formwork (editorial)</option><option value="furrow" >Furrow (modern-minimal)</option><option value="garden" >Garden (editorial)</option><option value="grid" >Grid (editorial)</option><option value="halftone" selected>Halftone (playful)</option><option value="hedgerow" >Hedgerow (editorial)</option><option value="hum" >Hum (playful)</option><option value="ink" >Ink (editorial)</option><option value="kiln" >Kiln (atmospheric)</option><option value="loom" >Loom (editorial)</option><option value="lumen" >Lumen (atmospheric)</option><option value="manifesto" >Manifesto (editorial)</option><option value="midnight" >Midnight (atmospheric)</option><option value="newsprint" >Newsprint (editorial)</option><option value="overprint" >Overprint (playful)</option><option value="pasteup" >Paste-up (playful)</option><option value="piste" >Piste (playful)</option><option value="refract" >Refract (atmospheric)</option><option value="ribbon" >Ribbon (atmospheric)</option><option value="rim" >Rim (modern-minimal)</option><option value="riso" >Riso (editorial)</option><option value="solstice" >Solstice (editorial)</option><option value="specimen" >Specimen (editorial)</option><option value="spore" >Spore (atmospheric)</option><option value="sport" >Sport (editorial)</option><option value="squeeze" >Squeeze (playful)</option><option value="sticker" >Sticker (playful)</option><option value="studio" >Studio (editorial)</option><option value="terminal" >Terminal (atmospheric)</option><option value="terrazzo" >Terrazzo (modern-minimal)</option><option value="ultraviolet" >Ultraviolet (modern-minimal)</option><option value="vantage" >Vantage (modern-minimal)</option><option value="vellum" >Vellum (editorial)</option><option value="wayfind" >Wayfind (modern-minimal)</option><option value="werkstatt" >Werkstatt (playful)</option>
+    </select>
+    <a href="../../Viral_Parmar_Resume.pdf" download style="background: var(--color-accent, #eab308); color: var(--color-accent-ink, #000); padding: 4px 10px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 12px;">Resume PDF</a>
+  </div>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="slab">
+  <div class="container slab__inner">
+    <a class="slab__mark" href="#main" aria-label="Pop Fizz, home">Pop Fizz</a>
+    <nav aria-label="Main" class="slab__nav">
+      <a href="#label">The label</a>
+      <a href="#inside">What&rsquo;s in it</a>
+    </nav>
+    <a class="btn btn--slab" href="#box">Buy a box</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-head">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-head">Lemon and ginger in a cold can.</h1>
+        <p class="lead">A lemon and ginger soda: 330ml cans, 39 calories each.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#box">Buy 12 for £14</a>
+          <a class="line" href="#inside">What&rsquo;s in it</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <figure class="photo" data-slot="hero" data-alt="The Pop Fizz can, cold and beaded, beside a cut lemon, in bright daylight">
+          <img src="photos/zitronenscheiben-2025-7302-1920.jpg" width="1920" height="1280" fetchpriority="high" style="object-position: 30% 50%" alt="Two thin lemon slices lit from behind, every segment glowing">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="poster" aria-labelledby="poster-head">
+    <div class="container poster__grid">
+      <p class="poster__fig" aria-hidden="true">39</p>
+      <div class="poster__text">
+        <h2 id="poster-head">Calories in a 330ml can</h2>
+        <p class="lead">Lemon for the bite, ginger for the heat, and the rest is bubbles.</p>
+      </div>
+      <figure class="poster__shot">
+        <div class="photo" data-slot="lemon" data-alt="A cut lemon, close and bright">
+          <img src="photos/lemon-whole-and-split-1920.jpg" width="1920" height="1280" loading="lazy" decoding="async" style="object-position: 78% 50%" alt="A lemon cut in half, its pale segments facing the light">
+        </div>
+        <figcaption class="caption">A lemon, cut through the middle.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="label" class="label" aria-labelledby="label-head">
+    <div class="container label__grid">
+      <div class="label__head">
+        <h2 id="label-head">Read the back of the can</h2>
+        <p class="lead">Everything the label says, at a size you can read.</p>
+      </div>
+      <dl class="panel">
+        <div><dt>Flavour</dt><dd>Lemon and ginger</dd></div>
+        <div><dt>Can</dt><dd>330ml</dd></div>
+        <div><dt>Calories</dt><dd>39 a can</dd></div>
+        <div><dt>Box</dt><dd>12 cans</dd></div>
+        <div><dt>Price</dt><dd>£14 a box</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="inside" class="inside" aria-labelledby="inside-head">
+    <div class="container">
+      <div class="ruled head-row">
+        <h2 id="inside-head">Ginger heat, cold fizz</h2>
+        <p class="lead">Two things go in with the lemon.</p>
+      </div>
+      <div class="inside__pair">
+        <figure>
+          <div class="photo" data-slot="ginger" data-alt="A knob of fresh ginger, for the heat">
+            <img src="photos/ginger-root-1920.jpg" width="1920" height="1276" loading="lazy" decoding="async" style="object-position: 50% 50%" alt="A knobbly hand of fresh ginger root">
+          </div>
+          <figcaption class="caption">Ginger, for the heat.</figcaption>
+        </figure>
+        <figure>
+          <div class="photo" data-slot="fizz" data-alt="Pop Fizz poured over ice, bubbles rising in the glass">
+            <img src="photos/lemon-series-3047083562-1920.jpg" width="1920" height="1280" loading="lazy" decoding="async" style="object-position: 35% 50%" alt="Two lemon slices suspended in sparkling water among tiny bubbles">
+          </div>
+          <figcaption class="caption">Bubbles, in every can.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="box" class="box screen" aria-labelledby="box-head">
+    <div class="container box__grid">
+      <div class="box__head">
+        <h2 id="box-head">Twelve cans to a box</h2>
+        <p class="lead">Pick how many boxes; the price follows from £14 each.</p>
+      </div>
+      <form class="order" data-endpoint="" novalidate aria-labelledby="box-head">
+        <p class="order__label" id="boxes-label">Boxes</p>
+        <div class="stepper" role="group" aria-labelledby="boxes-label">
+          <button type="button" data-step="-1" aria-label="One box fewer">&minus;</button>
+          <output id="boxes" aria-live="polite">1</output>
+          <button type="button" data-step="1" aria-label="One box more">+</button>
+        </div>
+        <p class="order__total"><span id="cans">12</span> cans, <span id="total">£14</span></p>
+        <div><button class="btn btn--ink" type="submit" id="buy">Buy 1 box for £14</button></div>
+        <p class="order__note" id="order-note" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="close">
+  <div class="container">
+    <p class="close__line">Lemon, ginger and a lot of fizz.</p>
+    <div class="close__row">
+      <nav aria-label="Footer" class="close__links">
+        <a href="#label">The label</a>
+        <a href="#inside">What&rsquo;s in it</a>
+        <a href="#box">Buy a box</a>
+      </nav>
+      <p class="close__note">© 2026 Pop Fizz</p>
+    </div>
+    <p class="close__credit" data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:Zitronenscheiben_--_2025_--_7302.jpg">Dietmar Rabich</a> <span>(<abbr>CC BY-SA 4.0</abbr>)</span>, <a href="https://commons.wikimedia.org/wiki/File:Lemon_-_whole_and_split.jpg">Ivar Leidus</a> <span>(<abbr>CC BY-SA 4.0</abbr>)</span>, <a href="https://commons.wikimedia.org/wiki/File:Ginger_Root.jpg">Sanjay Acharya</a> <span>(<abbr>CC BY-SA 4.0</abbr>)</span> and <a href="https://commons.wikimedia.org/wiki/File:Lemon_Series_(3047083562).jpg">THOR</a> <span>(<abbr>CC BY 2.0</abbr>)</span>, all on Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const form = document.querySelector('.order');
+  if (!form) return;
+  const out = form.querySelector('#boxes'), cans = form.querySelector('#cans'), total = form.querySelector('#total'), buy = form.querySelector('#buy'), note = form.querySelector('#order-note');
+  const minus = form.querySelector('[data-step="-1"]');
+  let n = 1;
+  const draw = () => {
+    out.textContent = String(n);
+    cans.textContent = String(n * 12);
+    total.textContent = '£' + String(n * 14);
+    buy.textContent = 'Buy ' + n + (n === 1 ? ' box' : ' boxes') + ' for £' + (n * 14);
+    minus.disabled = n === 1;
+  };
+  form.querySelectorAll('[data-step]').forEach((b) => b.addEventListener('click', () => { n = Math.min(10, Math.max(1, n + Number(b.dataset.step))); note.textContent = ''; draw(); }));
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.dataset.endpoint) { note.textContent = 'Nothing was ordered: the shop is not connected yet.'; return; }
+  });
+  draw();
+})();
+window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] > img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Col Blanc, ski school in Les Contamines</title>
+<meta name="description" content="Col Blanc is a small ski school in Les Contamines: group lessons for adults and children, every day from 9am, booked by the week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Hallmark Universal Hub Bar -->
+<div class="hallmark-hub-bar" style="position: relative; z-index: 10000; background-color: var(--color-paper-2, #18181b); color: var(--color-ink, #f4f4f5); border-bottom: 1px solid var(--color-rule, #3f3f46); padding: 8px 16px; font-family: var(--font-body, system-ui, sans-serif); font-size: 13px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <a href="../../index.html" style="font-weight: 600; text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+      <span style="color: var(--color-accent, #eab308);">←</span> <span>Viral Parmar Hub</span>
+    </a>
+    <span style="opacity: 0.35;">|</span>
+    <span>Hallmark Theme Layout: <strong style="color: var(--color-accent, #eab308);">Piste</strong> (playful)</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <label for="theme-hop-select-piste" style="font-size: 12px; opacity: 0.8;">Switch Layout:</label>
+    <select id="theme-hop-select-piste" onchange="if (this.value) window.location.href = '../' + this.value + '/index.html'" style="background: var(--color-paper, #09090b); color: var(--color-ink, #f4f4f5); border: 1px solid var(--color-rule, #3f3f46); border-radius: 4px; padding: 4px 8px; font-size: 12px; cursor: pointer;">
+      <option value="almanac" >Almanac (editorial)</option><option value="arcade" >Arcade (playful)</option><option value="atelier" >Atelier (editorial)</option><option value="bloom" >Bloom (atmospheric)</option><option value="blueprint" >Blueprint (modern-minimal)</option><option value="broadside" >Broadside (editorial)</option><option value="brutal" >Brutal (editorial)</option><option value="carnival" >Carnival (editorial)</option><option value="cobalt" >Cobalt (modern-minimal)</option><option value="console" >Console (modern-minimal)</option><option value="coral" >Coral (modern-minimal)</option><option value="darkroom" >Darkroom (atmospheric)</option><option value="dose" >Dose (modern-minimal)</option><option value="dusk" >Dusk (modern-minimal)</option><option value="editorial" >Editorial (editorial)</option><option value="formwork" >Formwork (editorial)</option><option value="furrow" >Furrow (modern-minimal)</option><option value="garden" >Garden (editorial)</option><option value="grid" >Grid (editorial)</option><option value="halftone" >Halftone (playful)</option><option value="hedgerow" >Hedgerow (editorial)</option><option value="hum" >Hum (playful)</option><option value="ink" >Ink (editorial)</option><option value="kiln" >Kiln (atmospheric)</option><option value="loom" >Loom (editorial)</option><option value="lumen" >Lumen (atmospheric)</option><option value="manifesto" >Manifesto (editorial)</option><option value="midnight" >Midnight (atmospheric)</option><option value="newsprint" >Newsprint (editorial)</option><option value="overprint" >Overprint (playful)</option><option value="pasteup" >Paste-up (playful)</option><option value="piste" selected>Piste (playful)</option><option value="refract" >Refract (atmospheric)</option><option value="ribbon" >Ribbon (atmospheric)</option><option value="rim" >Rim (modern-minimal)</option><option value="riso" >Riso (editorial)</option><option value="solstice" >Solstice (editorial)</option><option value="specimen" >Specimen (editorial)</option><option value="spore" >Spore (atmospheric)</option><option value="sport" >Sport (editorial)</option><option value="squeeze" >Squeeze (playful)</option><option value="sticker" >Sticker (playful)</option><option value="studio" >Studio (editorial)</option><option value="terminal" >Terminal (atmospheric)</option><option value="terrazzo" >Terrazzo (modern-minimal)</option><option value="ultraviolet" >Ultraviolet (modern-minimal)</option><option value="vantage" >Vantage (modern-minimal)</option><option value="vellum" >Vellum (editorial)</option><option value="wayfind" >Wayfind (modern-minimal)</option><option value="werkstatt" >Werkstatt (playful)</option>
+    </select>
+    <a href="../../Viral_Parmar_Resume.pdf" download style="background: var(--color-accent, #eab308); color: var(--color-accent-ink, #000); padding: 4px 10px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 12px;">Resume PDF</a>
+  </div>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="float">
+  <div class="float__bar">
+    <a class="float__mark" href="#top" aria-label="Col Blanc, back to the top">Col Blanc</a>
+    <nav class="float__links" aria-label="Sections">
+      <a href="#groups">The groups</a>
+      <a href="#steps">How it books</a>
+    </nav>
+    <a class="btn btn--line btn--s" href="#book">Book a week</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="hero-head">
+  <figure class="hero__photo" data-slot="hero" data-alt="A Col Blanc group following its instructor across a sunlit slope above Les Contamines">
+    <img src="photos/maestrodisciclaviereinsegnando-1920.jpg" width="1920" height="1433" fetchpriority="high" decoding="async" alt="A ski class in a line behind its instructor, crossing a sunlit slope under a blue sky">
+  </figure>
+  <div class="container hero__base">
+    <h1 id="hero-head">On the snow<br>at nine.</h1>
+    <div class="hero__aside">
+      <p class="lead">Group lessons for adults and children in Les Contamines, by the week.</p>
+      <div class="hero__acts">
+        <a class="btn btn--primary" href="#book">Book a week</a>
+        <a class="btn btn--line" href="#groups">See the groups</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="board" aria-labelledby="board-head">
+  <div class="container">
+    <h2 id="board-head">Small school, early start.</h2>
+    <dl class="board__row">
+      <div><dt>instructors, the whole school</dt><dd class="fig">6</dd></div>
+      <div><dt>groups, adults and children</dt><dd class="fig">2</dd></div>
+      <div><dt>first lesson, every day</dt><dd class="fig">9:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="groups" id="groups" aria-labelledby="groups-head">
+  <div class="container grid">
+    <figure class="groups__photo" data-slot="groups" data-alt="A Col Blanc instructor carving a turn on a groomed slope">
+      <img src="photos/ski-resort-soelden-p1032614-1920.jpg" width="1920" height="1440" loading="lazy" alt="A skier in black carving a turn across a wide groomed slope, spray behind, seen from above">
+    </figure>
+    <div class="groups__text">
+      <h2 id="groups-head">Two groups. Pick yours.</h2>
+      <p class="lead">Grown-ups ski with grown-ups, children with children.</p>
+      <ul class="groups__list">
+        <li>
+          <h3>Adults</h3>
+          <p>Levels: <span class="fill" data-fill="adult-levels">to be confirmed</span></p>
+          <a href="#book" data-group="adult-count">Book an adults’ week</a>
+        </li>
+        <li>
+          <h3>Children</h3>
+          <p>Ages: <span class="fill" data-fill="child-ages">to be confirmed</span></p>
+          <a href="#book" data-group="child-count">Book a children’s week</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="shout" aria-labelledby="shout-head">
+  <div class="container shout__in">
+    <h2 id="shout-head">Book a week.<br>Ski every day.</h2>
+    <p class="shout__line">One booking covers your whole week of lessons.</p>
+  </div>
+</section>
+
+<section class="steps" id="steps" aria-labelledby="steps-head">
+  <div class="container">
+    <div class="split-head">
+      <h2 id="steps-head">Three steps to the first lesson.</h2>
+      <p class="lead">From choosing the week to the first turn.</p>
+    </div>
+    <ol class="steps__list">
+      <li><h3>Pick the week</h3><p>Choose the week you are staying in Les Contamines.</p></li>
+      <li><h3>Count your skiers</h3><p>Adults and children, each into their own group.</p></li>
+      <li><h3>Meet your instructor</h3><p>One of the six, on the first morning of your week.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-head">
+  <div class="container grid">
+    <div class="book__main">
+      <div class="book__text">
+        <h2 id="book-head">Book a week</h2>
+        <p class="lead">Pick the week, then say who is skiing.</p>
+      </div>
+      <form class="book__form" data-endpoint="" novalidate>
+        <div class="field field--wide">
+          <label for="week">Week starting</label>
+          <input id="week" name="week" type="date" required>
+        </div>
+        <div class="field">
+          <span class="field__label" id="adults-label">Adults</span>
+          <div class="stepper" role="group" aria-labelledby="adults-label">
+            <button type="button" class="stepper__btn" data-step="-1" aria-label="One fewer adult">&minus;</button>
+            <input id="adult-count" name="adult_count" type="number" inputmode="numeric" min="0" value="2" aria-labelledby="adults-label">
+            <button type="button" class="stepper__btn" data-step="1" aria-label="One more adult">+</button>
+          </div>
+        </div>
+        <div class="field">
+          <span class="field__label" id="children-label">Children</span>
+          <div class="stepper" role="group" aria-labelledby="children-label">
+            <button type="button" class="stepper__btn" data-step="-1" aria-label="One fewer child">&minus;</button>
+            <input id="child-count" name="child_count" type="number" inputmode="numeric" min="0" value="0" aria-labelledby="children-label">
+            <button type="button" class="stepper__btn" data-step="1" aria-label="One more child">+</button>
+          </div>
+        </div>
+        <div class="field field--wide">
+          <label for="mail">Email address</label>
+          <input id="mail" name="email" type="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="book__go field--wide">
+          <button class="btn btn--primary" type="submit">Request this week</button>
+          <p class="book__help" id="book-help" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+    <figure class="book__photo" data-slot="book" data-alt="Skis standing in fresh snow outside the Col Blanc meeting point">
+      <img src="photos/snow-covered-skis-kosciuszko-national-park-1920.jpg" width="1920" height="1281" loading="lazy" alt="Pairs of skis and poles standing upright in deep fresh snow under laden branches">
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container foot__in">
+    <p class="foot__mark">Col Blanc</p>
+    <p class="foot__colophon">A small ski school in Les Contamines, with group lessons for adults and children.</p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="#groups">The groups</a>
+      <a href="#steps">How it books</a>
+      <a href="#book">Book a week</a>
+    </nav>
+    <p class="foot__legal">Contact: <span class="fill" data-fill="contact">phone and email to come</span></p>
+    <p class="foot__credits" data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:Maestrodisciclaviereinsegnando.jpg">Jilloau</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Ski_resort,_Soelden_(P1032614).jpg">Matti Blume</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Snow_Covered_Skis,_Kosciuszko_National_Park.jpg">Artefotograf</a> (CC BY-SA 4.0), via Wikimedia Commons</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  document.querySelectorAll('.stepper').forEach((s) => {
+    const input = s.querySelector('input');
+    s.querySelectorAll('[data-step]').forEach((b) => b.addEventListener('click', () => {
+      input.value = Math.max(Number(input.min || 0), (Number(input.value) || 0) + Number(b.dataset.step));
+    }));
+  });
+  document.querySelectorAll('[data-group]').forEach((a) => a.addEventListener('click', () => {
+    const field = document.getElementById(a.dataset.group);
+    if (field && Number(field.value) < 1) field.value = 1;
+  }));
+  document.querySelectorAll('form.book__form[data-endpoint]').forEach((form) => {
+    const help = form.querySelector('[aria-live]');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fields = [...form.querySelectorAll('input[required]')];
+      fields.forEach((i) => i.toggleAttribute('aria-invalid', !i.checkValidity()));
+      const bad = fields.find((i) => !i.checkValidity());
+      const people = Number(form.elements.adult_count.value) + Number(form.elements.child_count.value);
+      if (bad) { bad.setAttribute('aria-describedby', help.id); help.textContent = bad.type === 'email' ? 'That address looks incomplete. Write it as name@example.com.' : 'Pick the week you want, then send it.'; bad.focus(); return; }
+      if (people < 1) { help.textContent = 'Add at least one adult or child.'; form.elements.adult_count.focus(); return; }
+      if (!form.dataset.endpoint) { help.textContent = 'Nothing was sent: bookings are not connected yet.'; return; }
+      fetch(form.dataset.endpoint, { method: 'POST', body: new FormData(form) })
+        .then((r) => { help.textContent = r.ok ? 'Request received.' : 'That did not go through. Try again in a minute.'; })
+        .catch(() => { help.textContent = 'That did not go through. Try again in a minute.'; });
+    });
+  });
+})();
+</script>
+
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] > img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

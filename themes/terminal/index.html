@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>burrow: dotfiles on every machine, over SSH</title>
+<meta name="description" content="burrow is an open-source CLI that syncs your dotfiles across machines over SSH. One binary, no server, MIT licence.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Hallmark Universal Hub Bar -->
+<div class="hallmark-hub-bar" style="position: relative; z-index: 10000; background-color: var(--color-paper-2, #18181b); color: var(--color-ink, #f4f4f5); border-bottom: 1px solid var(--color-rule, #3f3f46); padding: 8px 16px; font-family: var(--font-body, system-ui, sans-serif); font-size: 13px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <a href="../../index.html" style="font-weight: 600; text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 6px;">
+      <span style="color: var(--color-accent, #eab308);">←</span> <span>Viral Parmar Hub</span>
+    </a>
+    <span style="opacity: 0.35;">|</span>
+    <span>Hallmark Theme Layout: <strong style="color: var(--color-accent, #eab308);">Terminal</strong> (atmospheric)</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <label for="theme-hop-select-terminal" style="font-size: 12px; opacity: 0.8;">Switch Layout:</label>
+    <select id="theme-hop-select-terminal" onchange="if (this.value) window.location.href = '../' + this.value + '/index.html'" style="background: var(--color-paper, #09090b); color: var(--color-ink, #f4f4f5); border: 1px solid var(--color-rule, #3f3f46); border-radius: 4px; padding: 4px 8px; font-size: 12px; cursor: pointer;">
+      <option value="almanac" >Almanac (editorial)</option><option value="arcade" >Arcade (playful)</option><option value="atelier" >Atelier (editorial)</option><option value="bloom" >Bloom (atmospheric)</option><option value="blueprint" >Blueprint (modern-minimal)</option><option value="broadside" >Broadside (editorial)</option><option value="brutal" >Brutal (editorial)</option><option value="carnival" >Carnival (editorial)</option><option value="cobalt" >Cobalt (modern-minimal)</option><option value="console" >Console (modern-minimal)</option><option value="coral" >Coral (modern-minimal)</option><option value="darkroom" >Darkroom (atmospheric)</option><option value="dose" >Dose (modern-minimal)</option><option value="dusk" >Dusk (modern-minimal)</option><option value="editorial" >Editorial (editorial)</option><option value="formwork" >Formwork (editorial)</option><option value="furrow" >Furrow (modern-minimal)</option><option value="garden" >Garden (editorial)</option><option value="grid" >Grid (editorial)</option><option value="halftone" >Halftone (playful)</option><option value="hedgerow" >Hedgerow (editorial)</option><option value="hum" >Hum (playful)</option><option value="ink" >Ink (editorial)</option><option value="kiln" >Kiln (atmospheric)</option><option value="loom" >Loom (editorial)</option><option value="lumen" >Lumen (atmospheric)</option><option value="manifesto" >Manifesto (editorial)</option><option value="midnight" >Midnight (atmospheric)</option><option value="newsprint" >Newsprint (editorial)</option><option value="overprint" >Overprint (playful)</option><option value="pasteup" >Paste-up (playful)</option><option value="piste" >Piste (playful)</option><option value="refract" >Refract (atmospheric)</option><option value="ribbon" >Ribbon (atmospheric)</option><option value="rim" >Rim (modern-minimal)</option><option value="riso" >Riso (editorial)</option><option value="solstice" >Solstice (editorial)</option><option value="specimen" >Specimen (editorial)</option><option value="spore" >Spore (atmospheric)</option><option value="sport" >Sport (editorial)</option><option value="squeeze" >Squeeze (playful)</option><option value="sticker" >Sticker (playful)</option><option value="studio" >Studio (editorial)</option><option value="terminal" selected>Terminal (atmospheric)</option><option value="terrazzo" >Terrazzo (modern-minimal)</option><option value="ultraviolet" >Ultraviolet (modern-minimal)</option><option value="vantage" >Vantage (modern-minimal)</option><option value="vellum" >Vellum (editorial)</option><option value="wayfind" >Wayfind (modern-minimal)</option><option value="werkstatt" >Werkstatt (playful)</option>
+    </select>
+    <a href="../../Viral_Parmar_Resume.pdf" download style="background: var(--color-accent, #eab308); color: var(--color-accent-ink, #000); padding: 4px 10px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 12px;">Resume PDF</a>
+  </div>
+</div>
+
+<a class="skip" href="#main">Skip to the install</a>
+
+<header class="status">
+  <nav class="status__in" aria-label="Sections">
+    <a class="status__session" href="#top">burrow</a>
+    <a class="status__win" href="#sync"><span aria-hidden="true">1</span> sync</a>
+    <a class="status__win" href="#commands"><span aria-hidden="true">2</span> commands</a>
+    <a class="status__win" href="#diff"><span aria-hidden="true">3</span> diff</a>
+    <a class="status__win" href="#install"><span aria-hidden="true">4</span> install</a>
+    <span class="status__fill" aria-hidden="true"></span>
+    <span class="status__meta">MIT</span>
+    <a class="status__src" href="#source">source</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-title">Your dotfiles, on every machine.</h1>
+        <p class="lead">One binary syncs them over SSH. No server, no account.</p>
+        <div class="get" data-tabs>
+          <div class="get__tabs" role="tablist" aria-label="Install with">
+            <button role="tab" aria-selected="true" aria-controls="get-brew" id="tab-brew">brew</button>
+            <button role="tab" aria-selected="false" aria-controls="get-cargo" id="tab-cargo" tabindex="-1">cargo</button>
+            <button role="tab" aria-selected="false" aria-controls="get-curl" id="tab-curl" tabindex="-1">curl</button>
+          </div>
+          <div class="get__line" role="tabpanel" id="get-brew" aria-labelledby="tab-brew"><code><span class="p" aria-hidden="true">$</span> brew install burrow</code><button class="copy" type="button" data-copy="brew install burrow" aria-label="Copy the brew command"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></div>
+          <div class="get__line" role="tabpanel" id="get-cargo" aria-labelledby="tab-cargo" hidden><code><span class="p" aria-hidden="true">$</span> cargo install burrow</code><button class="copy" type="button" data-copy="cargo install burrow" aria-label="Copy the cargo command"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></div>
+          <div class="get__line" role="tabpanel" id="get-curl" aria-labelledby="tab-curl" hidden><code><span class="p" aria-hidden="true">$</span> curl -fsSL <span class="fill" data-fill="script-url">script-url</span> | sh</code><button class="copy" type="button" disabled aria-label="Copy, once the script URL is set"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></div>
+        </div>
+        <p class="hero__meta">MIT licence <span aria-hidden="true">/</span> one binary <span aria-hidden="true">/</span> plain SSH</p>
+      </div>
+      <div class="hare art" data-art="hare" aria-hidden="true">
+        <canvas class="art__canvas"></canvas>
+        <pre class="art__still">
+                                                                         -====-
+                                                      =======:          **=---====
+                                                     *=:    :--=-      +*    :: :=+=
+                                                    =+   :      -==-   *-    :++- :++
+                                                    -+ -+++-:::   :++- *-     -**-::+#
+                                                     *-****=:  ::  :*+=#      :=#*=::=#
+                                                     *+####*+-      =#**      -*+#+---**
+                                                     +%#####*+-      *%==- :  =##+*=--=*:
+                                                     -@###**#*+-    :=##==+++=*#%+=+=--*=
+                                                      @%*#*+***+-:  -=*%#-=%%###%#+++--+*
+                                                      #%=++*++++==-  =*%%+:-#%%%%%*===-+*
+                                                      =@---=+==++=-: -*#%#=:-*%%%%*=-==+#
+                                                       %+  :-===------=#%%*- -*%#%#+=-=+#:
+                                                       *#    -=------:-*%%%+:--*%%#+=--+*-
+                                                        @-    -==---:--+#%%*---=#%#+=--=#-
+                                                        *%     -=-:-:--=*%%%+---=#*+---=#=
+                                                         %+     -=-:-::=*%%%*----**+----*=
+                                                         -@=     =+=   -+#%%#+---=*+-::-*+
+                                                          =@+    :-*#+- :+%@%+---=+=-:-=*+
+                                                           -%*   :-=**#+ -#%#=----+=:---++
+                                                             #%+: -==-*%+ +%#==---+=:::-++
+                                                              -%%##*+-=*#- #%+--::==:  :+=            :
+                                                                -*#%#=-*#* +@#+=: =*- ::+-
+                                                                    -*+*+*- #**+--+%#==+#*           :
+                                                                     -%++=+:*%++---=##==-*=          -     :
+                                                                      *%=+==+***-:--=++***++=-:      :   :
+                                                                       %*====+***=-:- =+*=-+***+*+=--:  ::
+                                                                       =@===++*+++- :+*##+==+*#*+*%%#*++-
+                                                                        ##==+++*===--=#%#*%@@%##*+-+**##*-
+                                                                        -%==+++==+=++=+*+#%+----==+*+-=+*#+-
+                                                                        =%%==++++=+***+=-*# **--*-+@@+:-=+**+:
+                                                                      -*@@@+-=+*+-+++++--#@=+*-=*- #@#*+-==+*#+
+                                                                       =%@#=======+====-:=#%+=+=-==+%%@%*++==*#*-  :
+                                                                      =#@@*-:-===+=-=+==- -++=---===*%%%%##*=+*##+-
+                                                                      =#@%=:===++--=++++==++===+==-: =##%#%#*+++=*#+::::
+                                                                      +@@+:=+-====+++**--**#**#**+==-:+###**+**++**##-
+                                                                     +@@#- =+=++==++**=+=+*#*##***++-:=**+=+*##%#+++##-:
+                                                                     *@@*=--++*+=+--+**%*+*######*+=:-=+==+++**#%-  +#
+                                                                     *@@*=-=-=+=**+++=+*++++**##**++--++==-=++++#%+=+-::
+                                                                     =%@#----:=+*##*****+++++******+=+*=-=-====++*#@#--
+                                                                    :=#%*--:-=---=++*##*#####****+++*###++*++++++*#%*=-:
+                                                                    :#@*::--=---:::=-=+*******##***##########**#%###+--:::
+                                                                   -#@+-:::-=++=++*+=*++=+++++*+=+++*%%#%%#*###%#*=-=-::
+                                                               =*#*%@#=  :=*+*+=++**+*+==++==++++++##*++++=-====*=+- --::
+                                                            :=#@%%=+##=-: ++==++#*++--=+*+====++**#@%- : -  - =-+===  ::  :
+                                                          =##**##+- --==- =======-=*+*+**=+++++++*#@%=:- -  - ::-=-=-   :   :
+                                                        =%@*++=*+==-  =*++-+***=+=+#**+==+#++*++**#@@+=: -   : : =--=-
+                                                       -#@*=+-:----=+-:-**+#**+*#*--+**==##++****##@@*+      :   -= :=:
+                                                     :+%@+=- : =---=*++==*+==*+*+===**==**+++****##@@%=::    :    -- :-
+                                                   =*#%@*=: -=--=-=+=++++*+==+**++#**+:+#*+=+****##@@%=:           -   -
+                                                :=#@#*#+:=: -==-++==-=-+++#+**+=-+***+-+#**==+*#*##%@%+-           ::   :
+                                              -###%*=+= - :=--=-+======+==******+**#*=+*+*+**+**###%@@+:            -
+                                            =*%%***=--=-==-:====--===+-=++++#*#****==***+=-+#**##%%%@@#=-            :
+                                        :=*#%%%+=+=  -=+-----==---====+===+++#****==*#*++*=++++##%%%@@*-
+                                      :+**#*=+=  ++  +=:-::-=-++=+==+==-=+==+***##+****+#*++*++*#%%%@@%+-
+                                    -+**+*+ ==-  --=-:*+  -=+=**++*==--====+++*+#*#+*#***+=*#*+*##%%@@%+-
+                                  :*%#*##+ -+--  -=+=--====+*+=+*+=-+-:====*+=++*##*#*##++**=+#**#%%@@@#-
+                                 +%%+-*+=- +=: : :=+=- -+*++=**++++=----======+++********##++++##%%%%@@*=
+                               +#@#==+= ---+=-=-:--==+=*+++**#***+=-::=-===+====++***#*##+******#%%%@@@#-
+                             +%##+--++=--:-=====::=++*+++=++**+*=---=--:-=+++=-=+***#**#*+***+**#%@@@@@#-
+                           :###+*-=====-  -++:==-+*=*#++*+*++**+===*+-==--=*++-=+**##*##*+*+=++**#@@%@@@+-
+                          =%*+===-=+-   -=:=- +++*++=**++**=**+-**+=-=+- ==+*+-++*##*##****+==+**#%%%@@%+-:
+                        :*%+=+-=::-==---*=+*+=*+=+*+=+**+++*#+==*==--+= =++=+++++**#*#***#*=*++###%%%@@#=
+                       -##++#=  :=:++=-:-+*+++**+++**+++**+*==*+---++==-==+==+++++**#*****=+#***##@%%@@*-
+                      +%#=+*---- =:=++=--++**+++*+*##*==+*++=*#+:+++-==+--===++++*******++++**+*#%%%%@@*-
+                     *#*-:=:= *==- -+*====+**#+*++*+*+#*=+**++*--+*+-+=--==-+++++*#**#*+=*++++**#%%%@@#+-
+                    ##=:-*-=:=*== : -=+++=++*+**+=+*+*#*==*#*++==-+++=====--++++******++**+++**#%%%%@@#-:
+                  -##=-=*=--:=*= ++==-+*+++==++**+**+***+++*+*+*+==+=-++-= ==*********++++=++**#%%%@@*+=
+                 =#%*--++---: =-=*=++==++=*++++++++**+++**+*=**#*+-==+===-:=+********++=+*=+**#%%%@@#=:
+                +%%#----+-  -+=-*=-=+--=====+++**=+**++*###*=##**+=+=+===--=+***+**++=+-+*+**#%%%@@%+
+               *#+*=:  -===+**=-==+=-=+**+++==++++*#*******#*+**#**+==+====+++*+++++=++++**##%%%@@%*=:
+              +%+== -:========- -**=**==++++++**#****##*****#*+*##*+++++==++=+++++===++++*#%%%%@@#+=-:
+             =#+- ===-*+- --=====-=*#****+*******+***#*###*+#%***#****+++++==+=+++==++++*#%%%@@@%+:
+            :%*-:==+=-=+-:-=++=*+++++***++++++++++++*****###*##**###****+++====++=+++++*#%%%@@%%#+:
+            ##+-+*=-  ++-=:-+*#*+#*-+*=====--=------===++**##*##*####*****++=====+++++*%%%%@@@*=-:
+           *%*+-=+=-::=+===-=+++**+===--=======+++=+==--=++**#########*****+++===++++*%%%%@@%*=
+          =%**- =+=+- -+=**=++=++-:--==-=+==++=*++*****++==+**#%%%#********+*++=-=+=+#%%#%@#+-
+          **=+=--=    *#+++**==-===-----=+=--=+++**#####*#*+=*##%%%##*++++*++++=-=+=*%#**%%+:
+         -%==--+ :==*-=*++*=:-====-----==++++=***###########*+*#%%%%#*++++++++++=-=+#*++##=:
+         *#=== - -**+-++++- =-----=====*+++*#***#*#####%%####*+*#%%%%#++*+++++++=--+#+=+#*
+        :%*+-+:=+:+*--=-+= ====-=++=++*+++=+#*#*#*##*###%##%##**#%%%%#*+*+++++++===+%+=+#+
+        +#+=:-+**----+=*= :=-===+*+**+++*+************####%####*##%%##**##+++++=+==+%+=+#+
+        #*+=+===+- =**=---++++*+++=+*++=+#********++**####%%%###########%%*+++++===+%*++%+
+       -#****=-- =-=+:-=++++++===*++=+***++*****+*+*#*####%%%##########%@%#+++==++=+#*++%*
+       +%%+=+ --=+=+-=++*++=-=+++++=++***+****++=*******##%%%#########%@@##*++===++=*#++##
+       =%*--+:--=++-=*+=+=-+=++===+*#++++****+=*****+***##%%%%######%%@@@*+%*+=====++#++*%:
+       +##+:=+===+*+++=:-==++:-=+#*+++****++=++**+*++++**#%%%%#####%%@@@#*+*#++===+++#*+*%-
+      :-#*=--=- =++==--==+- =+***++*+**#*++******++====+*#%@%%####%%@@%#*--+%*++=+=++*#+*%+
+        *#+---==:--:-==++=-+*+++********++******++=====+*#%%%%#%%%%@@@#-----#%*+++=++*#**%+
+        +#=-::=+= :=+=:*+====+*******++=+**++*+++==--=-=*%%%%%%%#%%@@@*=    *@#++=+++****#*
+        =*=---=-:==+- +*--=+++**++*+++=+**+*+++==-- ---+#%%%%@%##%%@@@+:   :+@%+++++++***##
+         +#=:-=: -=-:=+=--+*++=+++++==+*++++===--- --:=#%%%%@@%##%@@@#+:    -#@#++++++****#-
+         =#+- -===- =*-:++=++=+++*++=++**+++++=-- :::+#%#%%@@@%#%@@@%=-      +@%*+=++++*+*%-
+          #*+=:--=+-== =*+=++++++===+*+**+*+++===::-+###%%%@@%%%%@@#+-       +@@**=++++**+%=
+          =#+=----=-==-=+-=*++++=-++**+++++++=+==:-+*###%%@@%#%%@%#=         -#@#*-+++++*+#+
+           =*--=-=--=+++=-*=+++==+**++=++========-+***#%%@@%#%@@@*-:         :*@#*=+++++**##
+    :+*###*+*+-----==+===++=++--+*+==++==------==++**#%%@@%%%@@@*-            =%%#+=**+++**#
+   -*%@@@@@#===-=--=-======++--+++==++==+==- --==*+*#%%@%%%%@%#+=             =%@#***++++**#:
+   -*@@@@@%*- :=-:----==+===--+++=+*+====-::--==***#%%@%%%@%#+-               :%@#*++*+++**%-
+   -+#@@@@%#+- :-----====+---++=+++++-=------=+***#%%@%%%@%*+-                -#@#*++*+++####
+    =#@@@@@%#*=  -=-=++-===+=++=+++==----=--=+***#%%@%%@%#*-                   +@%+++**++*#*%#
+     +%@@@@%%#*=: :=+=-==-=+++=++=-== --=--=+##*#%%%@@%#*=----==++++****=---   :%%+=++**+**%+#*
+     -*@@@@@%##*+-  ==-=--+==+++=--:- ----++*##*#%%%#%%###%%%%@@@@%%%%#####**#*  *%+++**+++*#*%*
+      -=*%@@@%###*+- :-=-====+=---:::----++**+*+******#######**++==+===+++=++*@%  +*=****=++#%#@%*+*#+
+        -#@@@@%#***+=---=========--=++==-=++++=+++++++++++*+++++==+++=--+*+++++#@+ +++**+++*++++*%+=*@#
+        -==+*#@@@%**+====-===+++===++++===++++=+===++=+*+++====+++*++**=-=+**++*#%+=*======++-=++##+=+%%+
+            :-***##*+=--::-:-+===+====+++++++==+========-----===+==+****=-+***=-+=--+--==++**=-++*##*+**#
+                                 :  :-:::: :                     ------  :---:  :       ----: :------
+</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="figs" aria-labelledby="figs-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="figs-title">Small on purpose.</h2>
+        <p class="lead">Everything it needs is already on your machines.</p>
+      </div>
+      <dl class="figs__row">
+        <div><dt><span aria-hidden="true"># </span>servers</dt><dd class="figure">0</dd></div>
+        <div><dt><span aria-hidden="true"># </span>binary</dt><dd class="figure">1</dd></div>
+        <div><dt><span aria-hidden="true"># </span>ways to install</dt><dd class="figure">3</dd></div>
+        <div><dt><span aria-hidden="true"># </span>licence</dt><dd class="figure figure--word">MIT</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sync" id="sync" aria-labelledby="sync-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="sync-title">One sync, every host.</h2>
+        <p class="lead">Each host is reached directly over SSH. Nothing sits in the&nbsp;middle.</p>
+      </div>
+      <div class="sync__grid">
+        <div class="session" role="img" aria-label="A terminal session: burrow adds three paths, then syncs them to desk, pi and work, each done">
+<pre class="session__out" data-session>
+<span class="ln"><span class="p">~ $</span> <b data-type>burrow add ~/.zshrc ~/.gitconfig ~/.config/nvim</b></span>
+<span class="ln m">tracking 3 paths</span>
+<span class="ln"> </span>
+<span class="ln"><span class="p">~ $</span> <b data-type>burrow sync desk pi work</b></span>
+<span class="ln" data-host="desk">desk   ssh   3 files   <i>done</i></span>
+<span class="ln" data-host="pi">pi     ssh   3 files   <i>done</i></span>
+<span class="ln" data-host="work">work   ssh   3 files   <i>done</i></span>
+<span class="ln"> </span>
+<span class="ln"><span class="p">~ $</span> <span class="caret"></span></span>
+</pre>
+        </div>
+        <div class="map" aria-hidden="true">
+<pre class="map__out">
+                 <span data-node="desk">+----------------+</span>
+         <span data-path="desk">+--ssh--</span><span data-node="desk">| desk           |</span>
+         <span data-path="desk">|</span>       <span data-node="desk">+----------------+</span>
+<span class="map__home">+------+</span> <span data-path="desk">|</span>       <span data-node="pi">+----------------+</span>
+<span class="map__home">|laptop|</span><span data-path="all">-+</span><span data-path="pi">--ssh--</span><span data-node="pi">| pi             |</span>
+<span class="map__home">+------+</span> <span data-path="work">|</span>       <span data-node="pi">+----------------+</span>
+         <span data-path="work">|</span>       <span data-node="work">+----------------+</span>
+         <span data-path="work">+--ssh--</span><span data-node="work">| work           |</span>
+                 <span data-node="work">+----------------+</span>
+</pre>
+          <p class="map__note">no server</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="commands" id="commands" aria-labelledby="commands-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="commands-title">Three commands.</h2>
+        <p class="lead">That is the whole tool.</p>
+      </div>
+      <dl class="cmds">
+        <div><dt><span class="p" aria-hidden="true">$</span> burrow add <span class="arg">&lt;path&gt;</span></dt><dd>Track a file or a folder.</dd></div>
+        <div><dt><span class="p" aria-hidden="true">$</span> burrow sync <span class="arg">&lt;host&gt;…</span></dt><dd>Copy what is tracked to each host, over SSH.</dd></div>
+        <div><dt><span class="p" aria-hidden="true">$</span> burrow status</dt><dd>The last sync, host by host.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="diff" id="diff" aria-labelledby="diff-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="diff-title">What you get to delete.</h2>
+        <p class="lead">No server in the middle, so nothing to keep running between syncs.</p>
+      </div>
+      <figure class="diff__file" aria-label="A diff of a dotfile sync setup: a server and its upkeep removed; your own SSH, one binary and an MIT licence added">
+        <figcaption class="diff__head"><span>--- a/sync-setup</span><span>+++ b/sync-setup</span></figcaption>
+        <ol class="diff__lines">
+          <li class="hunk"><span>@@ how your dotfiles move @@</span></li>
+          <li class="del"><span>a server in the middle</span></li>
+          <li class="del"><span>something to keep running between syncs</span></li>
+          <li class="add"><span>the ssh you already use</span></li>
+          <li class="add"><span>one binary</span></li>
+          <li class="add"><span>source under the MIT licence</span></li>
+        </ol>
+      </figure>
+    </div>
+  </section>
+
+  <section class="install" id="install" aria-labelledby="install-title">
+    <div class="container install__grid">
+      <div class="head head--stack">
+        <h2 id="install-title">Install it your way.</h2>
+        <p class="lead">Then run <code>burrow add</code> on the first file you&nbsp;miss.</p>
+      </div>
+      <ul class="ways">
+        <li><span class="ways__k">Homebrew</span><code><span class="p" aria-hidden="true">$</span> brew install burrow</code><button class="copy" type="button" data-copy="brew install burrow" aria-label="Copy the Homebrew command"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></li>
+        <li><span class="ways__k">Cargo</span><code><span class="p" aria-hidden="true">$</span> cargo install burrow</code><button class="copy" type="button" data-copy="cargo install burrow" aria-label="Copy the Cargo command"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></li>
+        <li><span class="ways__k">Script</span><code><span class="p" aria-hidden="true">$</span> curl -fsSL <span class="fill" data-fill="script-url">script-url</span> | sh</code><button class="copy" type="button" disabled aria-label="Copy, once the script URL is set"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V2.5h8.5V11H11M2.5 5h8.5v8.5H2.5z" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></button></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="source">
+  <div class="container">
+<div class="foot__mark art" data-art="mark" aria-hidden="true"><canvas class="art__canvas"></canvas><pre class="art__still">  :::::::::
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#
+ -@@@@@@@@@#     -=+***++=:                 ::::::::::           :::::::::                 :::::::::       -=+****+=-                :::::::::       -=+****+=-                    :=++*****+=-                :::::::                          ::::::::
+ -@@@@@@@@@#  :*%@@@@@@@@@@%*-              @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+  :+%@@@@@@@@@@@@%+            #@@@@@@@@@=  -*%@@@@@@@@@@@@%=             :+#%@@@@@@@@@@@@@%*=           +@@@@@@@%                        -@@@@@@@@
+ -@@@@@@@@@# *@@@@@@@@@@@@@@@@#:            @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+ *@@@@@@@@@@@@@@@@#            #@@@@@@@@@= #@@@@@@@@@@@@@@@@#           -#@@@@@@@@@@@@@@@@@@@@@*:        -@@@@@@@@:                       *@@@@@@@#
+ -@@@@@@@@@%#@@@@@@@@@@@@@@@@@@@=           @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@*%@@@@@@@@@@@@@@@@@#            #@@@@@@@@@*%@@@@@@@@@@@@@@@@@*          #@@@@@@@@@@@@@@@@@@@@@@@@@+        %@@@@@@@+                       %@@@@@@@+
+ -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=          @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@@@@@@@@@@@@@@@@@@@@#            #@@@@@@@@@@@@@@@@@@@@@@@@@@@@*        -%@@@@@@@@@@@@%%%@@@@@@@@@@@@#       +@@@@@@@#                      :@@@@@@@@
+ -@@@@@@@@@@@@@*-   -+%@@@@@@@@@@@          @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@@@@@%*=-:    :-=*%@#            #@@@@@@@@@@@@@%*=-:    :-=*%@#       -@@@@@@@@@@@+-     -*@@@@@@@@@@%      -@@@@@@@@                      +@@@@@@@#
+ -@@@@@@@@@@@#         +@@@@@@@@@@*         @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@@@%=              -=            #@@@@@@@@@@@%=              -=       %@@@@@@@@@#          -%@@@@@@@@@*      %@@@@@@@-      ########=      #@@@@@@@+
+ -@@@@@@@@@@%           *@@@@@@@@@@         @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@@#                              #@@@@@@@@@@*                        +@@@@@@@@@%            -@@@@@@@@@@-     +@@@@@@@*     -@@@@@@@@%      @@@@@@@@
+ -@@@@@@@@@@=            @@@@@@@@@@=        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@@                               #@@@@@@@@@%                         %@@@@@@@@@-             *@@@@@@@@@*     -@@@@@@@%     #@@@@@@@@@-    =@@@@@@@#
+ -@@@@@@@@@@             #@@@@@@@@@+        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@*                               #@@@@@@@@@*                        :@@@@@@@@@%              -@@@@@@@@@%      %@@@@@@@:    @@@@@@@@@@*    *@@@@@@@+
+ -@@@@@@@@@%             +@@@@@@@@@*        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@+                        =@@@@@@@@@#               @@@@@@@@@@      +@@@@@@@+   +@@@@@@@@@@@    %@@@@@@@
+ -@@@@@@@@@#             +@@@@@@@@@*        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                        =@@@@@@@@@#               @@@@@@@@@@      -@@@@@@@#   %@@@@%*@@@@@=  -@@@@@@@#
+ -@@@@@@@@@%             *@@@@@@@@@*        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                        -@@@@@@@@@%              :@@@@@@@@@%       %@@@@@@@  -@@@@@* @@@@@#  +@@@@@@@=
+ -@@@@@@@@@@             #@@@@@@@@@=        @@@@@@@@@@          =@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                         @@@@@@@@@@              =@@@@@@@@@#       +@@@@@@@= #@@@@@- *@@@@@- #@@@@@@@
+ -@@@@@@@@@@+           -@@@@@@@@@@:        @@@@@@@@@@:         *@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                         #@@@@@@@@@*             %@@@@@@@@@+       -@@@@@@@* @@@@@#  -@@@@@* @@@@@@@#
+ -@@@@@@@@@@@-          %@@@@@@@@@%         %@@@@@@@@@=        :@@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                         -@@@@@@@@@@=           *@@@@@@@@@%         %@@@@@@#+@@@@@=   #@@@@%=@@@@@@@=
+ -@@@@@@@@@@@@+       -%@@@@@@@@@@=         #@@@@@@@@@@-      -%@@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                          *@@@@@@@@@@*        -#@@@@@@@@@@=         +@@@@@@@@@@@@%    =@@@@@@@@@@@@@
+ -@@@@@@@@@@@@@%*+++*%@@@@@@@@@@@#          =@@@@@@@@@@@#+++*#@@@@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                           #@@@@@@@@@@@#*+++*%@@@@@@@@@@@+          :@@@@@@@@@@@@+     %@@@@@@@@@@@#
+ -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#            %@@@@@@@@@@@@@@@@@@@@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                            +@@@@@@@@@@@@@@@@@@@@@@@@@@@=            %@@@@@@@@@@@      +@@@@@@@@@@@=
+ -@@@@@@@@@#=@@@@@@@@@@@@@@@@@@*              %@@@@@@@@@@@@@@@@#=@@@@@@@@@#               *@@@@@@@@@+                               #@@@@@@@@@=                             -#@@@@@@@@@@@@@@@@@@@@@@@*              +@@@@@@@@@@*       @@@@@@@@@@@
+ -@@@@@@@@@% :*@@@@@@@@@@@@@@#-                *@@@@@@@@@@@@@@* =@@@@@@@@@#               #@@@@@@@@@+                               #@@@@@@@@@=                               -*%@@@@@@@@@@@@@@@@@%+:               :@@@@@@@@@@:       *@@@@@@@@@#
+ :*********=    +#%@@@@@%%*+:                    +#%@@@@@@%*=   -*********=               =*********-                               =*********-                                  -+*#%@@@@@@@%#*=:                   +********+        :*********-
+                     ::                               ::                                                                                                                                :::</pre></div>
+    <div class="foot__base">
+      <p>burrow <span aria-hidden="true">/</span> MIT licence</p>
+      <nav aria-label="Footer">
+        <a href="#install">install</a>
+        <a href="#commands">commands</a>
+        <a href="#source" data-fill="repo-url">source</a>
+      </nav>
+      <p class="foot__note">The hare is a generated picture, printed in the page’s own glyphs.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="art.js"></script>
+<script src="page.js"></script>
+</body>
+</html>

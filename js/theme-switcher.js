@@ -140,7 +140,10 @@
               <span class="swatch-dot" style="background-color: var(--color-ink);" title="Ink"></span>
             </div>
           </div>
-          <div class="theme-card-font">${t.displayFace}, ${t.genre} (${t.paperBand})</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+            <div class="theme-card-font">${t.displayFace}, ${t.genre} (${t.paperBand})</div>
+            <a href="themes/${t.slug}/index.html" onclick="event.stopPropagation()" class="chip" style="font-size: 0.6875rem; text-decoration: none;">View Layout</a>
+          </div>
         `;
 
         card.addEventListener('click', () => {

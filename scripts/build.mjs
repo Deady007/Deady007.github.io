@@ -1014,7 +1014,7 @@ const themesGridHtml = processedThemes.map(t => `
 
     <div style="display: flex; gap: var(--space-xs); flex-wrap: wrap; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: var(--space-xs);">
       <button type="button" class="btn btn--sm" onclick="window.setHallmarkTheme('${t.slug}')">Apply to Site</button>
-      <a href="portfolios/${t.slug}.html" class="btn btn--sm">Open Portfolio</a>
+      <a href="themes/${t.slug}/index.html" class="btn btn--sm">Open Layout</a>
     </div>
   </article>
 `).join('');
@@ -1041,169 +1041,21 @@ fs.writeFileSync(path.join(ROOT_DIR, 'themes.html'), wrapPage({
 }));
 console.log('Wrote themes.html');
 
-// 11. Generate 50 Standalone Complete Portfolios in portfolios/<slug>.html
+// 11. Generate 50 Standalone Complete Portfolios in portfolios/<slug>.html pointing to themes/<slug>/index.html
 for (const t of processedThemes) {
-  const scheme = t.paperBand === 'dark' ? 'dark' : 'light';
-  
-  const themePageHtml = `<!DOCTYPE html>
-<html lang="en" data-theme="${t.slug}">
+  const portfolioRedirectHtml = `<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viral Parmar | ${t.name} Portfolio</title>
-  <meta name="description" content="Viral Parmar Portfolio styled in Hallmark ${t.name} (${t.genre}) theme.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <style>
-    /* Hallmark: ${t.name} (${t.slug}) | genre: ${t.genre} | stand-alone portfolio */
-    :root {
-      color-scheme: ${scheme};
-      ${t.block}
-    }
-    .theme-banner {
-      background-color: var(--color-paper-2);
-      border-bottom: var(--rule-hair, 1px) solid var(--color-rule);
-      padding: var(--space-xs) var(--space-md);
-      font-size: 0.8125rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: var(--space-xs);
-    }
-  </style>
+  <meta http-equiv="refresh" content="0; url=../themes/${t.slug}/index.html">
+  <title>Viral Parmar | Hallmark ${t.name} (${t.genre})</title>
+  <script>window.location.href = "../themes/${t.slug}/index.html";</script>
 </head>
-<body>
-  <!-- Theme Banner -->
-  <div class="theme-banner">
-    <div>
-      <a href="../themes.html" style="font-weight: 600; text-decoration: underline;">Back to 50 Themes Showcase</a>
-      <span style="margin-inline: var(--space-xs); color: var(--color-muted);">|</span>
-      <span>Theme: <strong>${t.name}</strong> (${t.genre})</span>
-    </div>
-    <div>
-      <select onchange="window.location.href = this.value + '.html'" style="padding: var(--space-3xs) var(--space-xs); border: var(--rule-hair, 1px) solid var(--color-rule); border-radius: var(--radius-pill); background: var(--color-paper);">
-        ${processedThemes.map(other => `<option value="${other.slug}" ${other.slug === t.slug ? 'selected' : ''}>${other.name} (${other.genre})</option>`).join('')}
-      </select>
-    </div>
-  </div>
-
-  ${getHeaderHtml('overview', true)}
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1 class="hero-title">Viral Parmar</h1>
-          <div class="hero-subhead">Business analyst, cybersecurity candidate, and full-stack systems engineer</div>
-
-          <div class="hero-badge">
-            <span class="status-indicator"></span>
-            <span>Hallmark Theme: ${t.name}</span>
-          </div>
-
-          <p class="hero-lead">
-            Translating enterprise requirements into deterministic stories, electronic records, and access-governed workflows.
-          </p>
-
-          <div class="hero-cta">
-            <a href="../projects.html" class="btn btn--primary">Enterprise Projects</a>
-            <a href="../compliance.html" class="btn">GxP Compliance</a>
-            <a href="../Viral_Parmar_Resume.pdf" download class="btn">Resume PDF</a>
-          </div>
-        </div>
-
-        <div class="surface">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Verified telemetry</span>
-            <span class="chip chip--accent">BCA 2025</span>
-          </div>
-          <div class="telemetry-grid">
-            <div class="telemetry-item">
-              <div class="telemetry-num measured">50+</div>
-              <div class="telemetry-label">GitHub repositories (@Deady007)</div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-num measured">95.7%</div>
-              <div class="telemetry-label">SPPL ERP completion (178/186)</div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-num measured">100%</div>
-              <div class="telemetry-label">LinQ HRMS delivery (176 stories)</div>
-            </div>
-            <div class="telemetry-item">
-              <div class="telemetry-num measured">28 Tests</div>
-              <div class="telemetry-label">PO Copilot unit suite (0.895s)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Grid -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Key enterprise systems</h2>
-          <p class="section-desc">Sample systems delivered across pharmaceutical ERP, enterprise HRMS, and developer tools.</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="project-card">
-            <h3 class="project-card-title">PO Copilot Desktop</h3>
-            <p class="project-card-desc">Desktop PO application with SQLite WAL mode persistence, 21 CFR Part 11 electronic signatures, and 28 unit tests.</p>
-            <a href="../projects.html#po-copilot" class="btn btn--sm">View Specs</a>
-          </article>
-          <article class="project-card">
-            <h3 class="project-card-title">SPPL Pharma ERP</h3>
-            <p class="project-card-desc">Batch manufacturing execution system handling MPCR/BPCR transitions, QA quarantine gates, and OOT deviation handling.</p>
-            <a href="../compliance.html" class="btn btn--sm">View Audit Trail</a>
-          </article>
-          <article class="project-card">
-            <h3 class="project-card-title">LinQ Enterprise HRMS</h3>
-            <p class="project-card-desc">176 delivered user stories with biometric attendance coupling, petty cash capping, and reporting hierarchy management.</p>
-            <a href="../projects.html#linq" class="btn btn--sm">View Specs</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Terminal -->
-    <section class="section" style="border-top: var(--rule-hair, 1px) solid var(--color-rule);">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Interactive terminal console</h2>
-        </div>
-        <div class="terminal-window" id="portfolio-terminal">
-          <div class="terminal-bar">
-            <span class="measured">viral@security-audit-console: ~</span>
-            <span class="chip chip--accent" style="font-size: 0.6875rem;">Online</span>
-          </div>
-          <div class="terminal-body">
-            <div class="terminal-output">
-              <div>Viral Parmar Telemetry Console [Version 2.0.0]</div>
-              <div>Type <span style="color: var(--color-accent); font-weight: 600;">help</span> to inspect available commands.</div>
-            </div>
-            <form class="terminal-form">
-              <span class="prompt-tag">guest@vp-portfolio:~$</span>
-              <input type="text" class="terminal-input" placeholder="help, repos, audit --project sppl..." autocomplete="off" spellcheck="false">
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  ${getFooterHtml(true)}
-
-  <script src="../js/themes-data.js"></script>
-  <script src="../js/theme-switcher.js"></script>
-  <script src="../js/console.js"></script>
+<body style="font-family: system-ui, sans-serif; background: #09090b; color: #f4f4f5; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+  <p>Loading Hallmark <strong>${t.name}</strong> (${t.genre}) layout... <a href="../themes/${t.slug}/index.html" style="color: #eab308;">Click here to enter</a>.</p>
 </body>
 </html>`;
 
-  fs.writeFileSync(path.join(ROOT_DIR, 'portfolios', `${t.slug}.html`), themePageHtml);
+  fs.writeFileSync(path.join(ROOT_DIR, 'portfolios', `${t.slug}.html`), portfolioRedirectHtml);
 }
-console.log(`Successfully generated all 50 standalone portfolio pages in ${path.join(ROOT_DIR, 'portfolios')}/`);
+console.log(`Successfully generated all 50 standalone portfolio redirect pages in ${path.join(ROOT_DIR, 'portfolios')}/`);
