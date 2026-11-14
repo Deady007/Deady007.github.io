@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Console | Viral Parmar Portfolio</title>
+  <meta name="description" content="Personal portfolio for Viral Parmar: Business Analyst, Cybersecurity Candidate, and Full-Stack Systems Engineer in Vadodara, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>(function(){const t=localStorage.getItem('hallmark_theme')||'console';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <span class="status-indicator"></span>
+        <span class="brand-name">Viral Parmar</span>
+        <span class="brand-role">Systems & BA</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        
+    <a href="index.html" class="nav-link ">Overview</a>
+  
+    <a href="projects.html" class="nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="nav-link active">Terminal</a>
+  
+    <a href="about.html" class="nav-link ">About</a>
+  
+    <a href="themes.html" class="nav-link ">50 Themes</a>
+  
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-trigger-btn" id="theme-trigger-btn" aria-label="Open Hallmark Theme Switcher">
+          <span>Theme:</span>
+          <span class="theme-current-label" id="current-theme-name">Console</span>
+        </button>
+
+        <a href="Viral_Parmar_Resume.pdf" download class="btn btn--sm">Resume</a>
+
+        <button type="button" class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="brand-name">Viral Parmar</span>
+      <button type="button" class="theme-drawer-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      
+    <a href="index.html" class="mobile-nav-link ">Overview</a>
+  
+    <a href="projects.html" class="mobile-nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="mobile-nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="mobile-nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="mobile-nav-link active">Terminal</a>
+  
+    <a href="about.html" class="mobile-nav-link ">About</a>
+  
+    <a href="themes.html" class="mobile-nav-link ">50 Themes</a>
+  
+    </div>
+  </aside>
+
+  <!-- Theme Switcher Drawer Modal -->
+  <div class="theme-drawer-backdrop" id="theme-drawer-backdrop"></div>
+  <aside class="theme-drawer" id="theme-drawer" role="dialog" aria-modal="true" aria-label="Hallmark Theme Selector">
+    <div class="theme-drawer-header">
+      <div>
+        <h3 class="theme-drawer-title">Hallmark 50 Themes</h3>
+        <p class="theme-drawer-desc">Select any of the 50 Hallmark design themes to apply across the entire site instantly.</p>
+      </div>
+      <button type="button" class="theme-drawer-close" id="theme-drawer-close" aria-label="Close theme switcher">✕</button>
+    </div>
+
+    <div class="theme-drawer-controls">
+      <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes, fonts, genres...">
+      <div class="theme-genre-tabs" id="theme-genre-tabs">
+        <button class="genre-tab active" data-genre="all">All (50)</button>
+        <button class="genre-tab" data-genre="modern-minimal">Modern Minimal (12)</button>
+        <button class="genre-tab" data-genre="editorial">Editorial (20)</button>
+        <button class="genre-tab" data-genre="atmospheric">Atmospheric (9)</button>
+        <button class="genre-tab" data-genre="playful">Playful (9)</button>
+      </div>
+    </div>
+
+    <div class="theme-drawer-grid" id="theme-drawer-grid"></div>
+
+    <div class="theme-drawer-footer">
+      <button type="button" class="btn btn--sm" id="random-theme-btn">Pick Random Theme</button>
+      <a href="themes.html" class="link-discrete" style="font-size: 0.8125rem; color: var(--color-muted);">Browse 50 themes directory</a>
+    </div>
+  </aside>
+  
+
+  <main id="main-content">
+    
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">Live systems terminal & telemetry console</h1>
+        <p class="section-desc">Interactive command line interface to query live telemetry, inspect regulatory audit traces, and test Hallmark design themes.</p>
+      </div>
+
+      <div class="terminal-window" id="portfolio-terminal" style="margin-bottom: 32px;">
+        <div class="terminal-bar">
+          <span class="measured">viral@security-audit-console: ~</span>
+          <span class="chip chip--accent" style="font-size: 0.6875rem;">Online</span>
+        </div>
+        <div class="terminal-body" style="min-height: 440px;">
+          <div class="terminal-output">
+            <div>Viral Parmar Systems & Security Terminal [Version 2.0.0]</div>
+            <div>Type <span style="color: var(--color-accent); font-weight: 600;">help</span> to inspect available commands.</div>
+            <div>Type <span style="color: var(--color-accent); font-weight: 600;">theme &lt;slug&gt;</span> to activate any of the 50 Hallmark design themes.</div>
+          </div>
+          <form class="terminal-form">
+            <span class="prompt-tag">guest@vp-portfolio:~$</span>
+            <input type="text" class="terminal-input" placeholder="help, whoami, repos, audit --project sppl, theme console..." autocomplete="off" spellcheck="false" autofocus>
+          </form>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="surface">
+          <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 6px;">audit --project sppl</h2>
+          <p style="font-size: 0.8125rem; color: var(--color-muted);">Runs regulatory validation checks on SPPL batch records, QA gates, and 21 CFR Part 11 electronic records.</p>
+        </div>
+        <div class="surface">
+          <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 6px;">audit --project linq</h2>
+          <p style="font-size: 0.8125rem; color: var(--color-muted);">Verifies attendance coupling, petty cash financial guardrails, and org chart hierarchies.</p>
+        </div>
+        <div class="surface">
+          <h2 style="font-size: 1rem; font-weight: 600; margin-bottom: 6px;">theme &lt;name&gt;</h2>
+          <p style="font-size: 0.8125rem; color: var(--color-muted);">Switches the entire website theme in real time (e.g. "theme blueprint", "theme darkroom", "theme arcade").</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight: 600; color: var(--color-ink);">Viral Parmar</span>
+        <span style="margin-inline: 8px;">(Vadodara, Gujarat, India)</span>
+        <span class="measured">parmarviral397@gmail.com</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Deady007" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parmar-viral-13m711" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="tel:6351493983">+91 6351493983</a>
+        <a href="Viral_Parmar_Resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="js/themes-data.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/console.js"></script>
+</body>
+</html>

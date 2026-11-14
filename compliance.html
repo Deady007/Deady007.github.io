@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance & GxP Matrix | Viral Parmar Portfolio</title>
+  <meta name="description" content="Personal portfolio for Viral Parmar: Business Analyst, Cybersecurity Candidate, and Full-Stack Systems Engineer in Vadodara, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>(function(){const t=localStorage.getItem('hallmark_theme')||'console';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <span class="status-indicator"></span>
+        <span class="brand-name">Viral Parmar</span>
+        <span class="brand-role">Systems & BA</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        
+    <a href="index.html" class="nav-link ">Overview</a>
+  
+    <a href="projects.html" class="nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="nav-link active">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="nav-link ">Terminal</a>
+  
+    <a href="about.html" class="nav-link ">About</a>
+  
+    <a href="themes.html" class="nav-link ">50 Themes</a>
+  
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-trigger-btn" id="theme-trigger-btn" aria-label="Open Hallmark Theme Switcher">
+          <span>Theme:</span>
+          <span class="theme-current-label" id="current-theme-name">Console</span>
+        </button>
+
+        <a href="Viral_Parmar_Resume.pdf" download class="btn btn--sm">Resume</a>
+
+        <button type="button" class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="brand-name">Viral Parmar</span>
+      <button type="button" class="theme-drawer-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      
+    <a href="index.html" class="mobile-nav-link ">Overview</a>
+  
+    <a href="projects.html" class="mobile-nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="mobile-nav-link active">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="mobile-nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="mobile-nav-link ">Terminal</a>
+  
+    <a href="about.html" class="mobile-nav-link ">About</a>
+  
+    <a href="themes.html" class="mobile-nav-link ">50 Themes</a>
+  
+    </div>
+  </aside>
+
+  <!-- Theme Switcher Drawer Modal -->
+  <div class="theme-drawer-backdrop" id="theme-drawer-backdrop"></div>
+  <aside class="theme-drawer" id="theme-drawer" role="dialog" aria-modal="true" aria-label="Hallmark Theme Selector">
+    <div class="theme-drawer-header">
+      <div>
+        <h3 class="theme-drawer-title">Hallmark 50 Themes</h3>
+        <p class="theme-drawer-desc">Select any of the 50 Hallmark design themes to apply across the entire site instantly.</p>
+      </div>
+      <button type="button" class="theme-drawer-close" id="theme-drawer-close" aria-label="Close theme switcher">✕</button>
+    </div>
+
+    <div class="theme-drawer-controls">
+      <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes, fonts, genres...">
+      <div class="theme-genre-tabs" id="theme-genre-tabs">
+        <button class="genre-tab active" data-genre="all">All (50)</button>
+        <button class="genre-tab" data-genre="modern-minimal">Modern Minimal (12)</button>
+        <button class="genre-tab" data-genre="editorial">Editorial (20)</button>
+        <button class="genre-tab" data-genre="atmospheric">Atmospheric (9)</button>
+        <button class="genre-tab" data-genre="playful">Playful (9)</button>
+      </div>
+    </div>
+
+    <div class="theme-drawer-grid" id="theme-drawer-grid"></div>
+
+    <div class="theme-drawer-footer">
+      <button type="button" class="btn btn--sm" id="random-theme-btn">Pick Random Theme</button>
+      <a href="themes.html" class="link-discrete" style="font-size: 0.8125rem; color: var(--color-muted);">Browse 50 themes directory</a>
+    </div>
+  </aside>
+  
+
+  <main id="main-content">
+    
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">Cybersecurity integrity & GxP compliance matrix</h1>
+        <p class="section-desc">Traceability matrix verifying software systems against US FDA 21 CFR Part 11, EU GMP Annex 11, ALCOA+ data integrity, and Tata Cybersecurity simulation benchmarks.</p>
+      </div>
+
+      <div class="cards-grid" style="margin-bottom: 32px;">
+        <div class="surface">
+          <h2 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">21 CFR §11.10(e) Audit Trails</h2>
+          <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">
+            Computer-generated, time-stamped audit trails recording the date, time, actor, and reason for any change. Previous values remain un-overwritten and queryable.
+          </p>
+        </div>
+
+        <div class="surface">
+          <h2 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">21 CFR §11.50 Signature Manifestations</h2>
+          <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">
+            Electronic signatures clearly manifesting the printed name of the signer, date/time stamp, and the associated meaning (e.g. authorship, review, approval).
+          </p>
+        </div>
+
+        <div class="surface">
+          <h2 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">ALCOA+ Data Integrity Principles</h2>
+          <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">
+            Enforcing Attributable, Legible, Contemporaneous, Original, and Accurate data records across all batch processing and laboratory execution.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Regulation / Standard</th>
+              <th>Requirement Description</th>
+              <th>Implementation Evidence</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="measured" style="font-weight: 600;">21 CFR §11.10(e)</td>
+              <td>Immutable audit trails for record modifications</td>
+              <td>Gapless database change logs in SPPL ERP & PO Copilot SQLite WAL</td>
+              <td><span class="chip chip--ok">Verified PASS</span></td>
+            </tr>
+            <tr>
+              <td class="measured" style="font-weight: 600;">21 CFR §11.50</td>
+              <td>Electronic signature manifestation & meaning</td>
+              <td>Full name, ISO timestamp, and role capture before state change execution</td>
+              <td><span class="chip chip--ok">Verified PASS</span></td>
+            </tr>
+            <tr>
+              <td class="measured" style="font-weight: 600;">21 CFR §11.10(d)</td>
+              <td>Authority checks and role-based permissions</td>
+              <td>RBAC segregation separating QC Analysts, QA Reviewers, and Production</td>
+              <td><span class="chip chip--ok">Verified PASS</span></td>
+            </tr>
+            <tr>
+              <td class="measured" style="font-weight: 600;">Tata Simulation</td>
+              <td>Threat analysis and anomaly pattern detection</td>
+              <td>Completed cyber simulation analyzing forensic traffic and incident vectors</td>
+              <td><span class="chip chip--ok">Completed PASS</span></td>
+            </tr>
+            <tr>
+              <td class="measured" style="font-weight: 600;">Deloitte Simulation</td>
+              <td>Forensic data validation & telemetry integrity</td>
+              <td>Telemetry cleansing and tabular reconciliation for business decisions</td>
+              <td><span class="chip chip--ok">Completed PASS</span></td>
+            </tr>
+            <tr>
+              <td class="measured" style="font-weight: 600;">Schedule M § 7.1</td>
+              <td>Master and Batch Production Record Terminology</td>
+              <td>Transitioned all manufacturing forms to BPCR plant standard (SPPL-82)</td>
+              <td><span class="chip chip--ok">Verified PASS</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight: 600; color: var(--color-ink);">Viral Parmar</span>
+        <span style="margin-inline: 8px;">(Vadodara, Gujarat, India)</span>
+        <span class="measured">parmarviral397@gmail.com</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Deady007" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parmar-viral-13m711" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="tel:6351493983">+91 6351493983</a>
+        <a href="Viral_Parmar_Resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="js/themes-data.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/console.js"></script>
+</body>
+</html>

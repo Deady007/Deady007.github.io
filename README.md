@@ -1,46 +1,43 @@
 # Viral Parmar - Systems, Cybersecurity & Product Engineering Portfolio
 
-Personal engineering and business analysis portfolio for **Viral Parmar**, built on the Hallmark Console design system with strict typography, measured telemetry, and dark/light themes.
+Personal engineering and business analysis portfolio for **Viral Parmar**, built on the Hallmark design system with universal token switching across all **50 Hallmark Themes** and dedicated multi-page architecture.
 
 ## Overview
 
 - **Owner:** Viral Parmar (Vadodara, Gujarat, India)
 - **Roles:** Business Analyst, Cybersecurity Analyst Candidate, Full-Stack Systems Engineer
-- **GitHub:** [@Deady007](https://github.com/Deady007)
-- **Live Assets:** Includes interactive audit terminal, 21 CFR Part 11 compliance verification table, 7 featured projects, and downloadable resume.
+- **Live User Site:** [https://deady007.github.io/](https://deady007.github.io/)
+- **Repository Portfolio:** [https://deady007.github.io/Portfolio/](https://deady007.github.io/Portfolio/)
+- **GitHub Profile:** [@Deady007](https://github.com/Deady007)
 
-## Key Sections
+## Dynamic Multi-Page Architecture
 
-1. **Telemetry & Hero:** High-density metric panels showing verified production delivery stats across pharmaceutical GxP ERPs, HRMS suites, and 50+ GitHub repositories.
-2. **Disciplinary Competencies:** Categorized capabilities across Cybersecurity & Compliance (21 CFR Part 11, ALCOA+, RBAC), Agile Product Ownership (User stories, Given/When/Then acceptance criteria), Full-Stack Systems (Python, PHP/Laravel, SQLite WAL, React), and Analytical Tooling.
-3. **Featured Deliverables:** Interactive filterable project directory covering:
-   - **PO Copilot:** Desktop productivity tool with SQLite WAL persistence, e-signatures, and deterministic test suite.
-   - **Sprint0 Flow Analytics Dashboard:** Delivery flow metrics with Markov completion risk modeling.
-   - **LinQ Enterprise HRMS (LN & LD):** Enterprise HR suite with biometric attendance coupling and org hierarchies.
-   - **Suleshvari Pharma ERP (SPPL):** GxP batch manufacturing, quarantine gates, and OOT deviation handling.
-   - **BioCare LIMS Platform:** Chain of custody and GS1-128 barcode parsing.
-   - **Deepak Foundation Health Portal (HBP-v3):** Healthcare beneficiary tracking and field survey forms.
-   - **CoreKit Microservices Architecture:** Distributed service architecture with Docker and TypeScript.
-4. **Regulatory & Compliance Verification Table:** Direct audit traceability mapping requirements to verification results (US FDA 21 CFR §11.10(e), §11.50, Tata Cybersecurity Simulation, Deloitte Analytics Simulation).
-5. **Interactive Audit & Telemetry Console:** Web terminal supporting commands: `help`, `whoami`, `skills`, `repos`, `audit --project sppl`, `audit --project linq`, `telemetry`, `certifications`, `contact`, and `clear`.
+1. **Mission Control (`index.html`):** Executive telemetry, disciplinary competencies (Cybersecurity, Agile PO, Full-Stack Development), featured enterprise systems, and terminal preview.
+2. **Projects & Repositories (`projects.html`):** In-depth engineering specifications for PO Copilot, Sprint0 Flow Analytics, LinQ Enterprise HRMS, Suleshvari Pharma ERP, BioCare LIMS, Deepak Foundation Health Portal, and CoreKit Microservices Mesh.
+3. **Cybersecurity & GxP Compliance (`compliance.html`):** Traceability verification against US FDA 21 CFR §11.10(e), §11.50, ALCOA+ principles, and Tata Group Cybersecurity Analyst simulation findings.
+4. **Agile Product Ownership (`agile-po.html`):** Deterministic user stories, Given/When/Then acceptance criteria, form validation matrices, and two-tier context reporting models.
+5. **Interactive Systems Terminal (`console.html`):** Live CLI terminal supporting commands: `help`, `whoami`, `skills`, `repos`, `audit --project sppl`, `audit --project linq`, `telemetry`, `certifications`, `themes`, `theme <slug>`, and `contact`.
+6. **About & Credentials (`about.html`):** Academic foundation at The Maharaja Sayajirao University of Baroda (BCA 2022-2025), experience at Fiscal Ox and Deepak Foundation, and direct resume download.
+7. **50 Hallmark Themes Showcase (`themes.html`):** Complete gallery displaying all 50 Hallmark design themes with live palette swatches, typography pairing specifications, and instant theme activation.
 
-## Technology & Design Standards
+## 50 Hallmark Portfolios Directory (`portfolios/`)
 
-- Built with semantic HTML5, modern CSS3 variables, and vanilla JavaScript (zero heavy framework dependencies).
-- Designed according to Hallmark standards (`console` theme, graphite ground with chromatic amber and cool blue telemetry accents).
-- Strict 4px spacing scale and contrast accessibility compliant.
-- Responsive layout across desktop (1280px+), tablet, and mobile (320px+).
+Includes 50 standalone, pre-rendered portfolio instances under `portfolios/`:
+`almanac.html`, `arcade.html`, `atelier.html`, `bloom.html`, `blueprint.html`, `broadside.html`, `brutal.html`, `carnival.html`, `cobalt.html`, `console.html`, `coral.html`, `darkroom.html`, `dose.html`, `dusk.html`, `editorial.html`, `formwork.html`, `furrow.html`, `garden.html`, `grid.html`, `halftone.html`, `hedgerow.html`, `hum.html`, `ink.html`, `kiln.html`, `loom.html`, `lumen.html`, `manifesto.html`, `midnight.html`, `newsprint.html`, `overprint.html`, `pasteup.html`, `piste.html`, `refract.html`, `ribbon.html`, `rim.html`, `riso.html`, `solstice.html`, `specimen.html`, `spore.html`, `sport.html`, `squeeze.html`, `sticker.html`, `studio.html`, `terminal.html`, `terrazzo.html`, `ultraviolet.html`, `vantage.html`, `vellum.html`, `wayfind.html`, and `werkstatt.html`.
 
-## Running Locally
+## Real-Time Theme Switcher
 
-To preview the portfolio locally:
+- Available on every page through the top navigation button.
+- Smooth drawer modal with instant theme search and genre filters (`Modern Minimal`, `Editorial`, `Atmospheric`, `Playful`).
+- Instantly overrides CSS tokens (`--color-paper`, `--color-ink`, `--color-accent`, typography, radiuses) with zero-flash execution.
+- Persisted across navigation sessions via `localStorage`.
+
+## Local Development & Build
 
 ```bash
-# Using Python
-python3 -m http.server 3000 --directory /home/viral/portfolio
+# Rebuild all pages, themes, and 50 portfolios:
+node scripts/build.mjs
 
-# Or using Node http-server / npx
-npx serve /home/viral/portfolio
+# Preview locally:
+python3 -m http.server 3000
 ```
-
-Then navigate to `http://localhost:3000` in any web browser.

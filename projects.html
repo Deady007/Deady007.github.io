@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Projects | Viral Parmar Portfolio</title>
+  <meta name="description" content="Personal portfolio for Viral Parmar: Business Analyst, Cybersecurity Candidate, and Full-Stack Systems Engineer in Vadodara, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>(function(){const t=localStorage.getItem('hallmark_theme')||'console';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <span class="status-indicator"></span>
+        <span class="brand-name">Viral Parmar</span>
+        <span class="brand-role">Systems & BA</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        
+    <a href="index.html" class="nav-link ">Overview</a>
+  
+    <a href="projects.html" class="nav-link active">Projects</a>
+  
+    <a href="compliance.html" class="nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="nav-link ">Terminal</a>
+  
+    <a href="about.html" class="nav-link ">About</a>
+  
+    <a href="themes.html" class="nav-link ">50 Themes</a>
+  
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-trigger-btn" id="theme-trigger-btn" aria-label="Open Hallmark Theme Switcher">
+          <span>Theme:</span>
+          <span class="theme-current-label" id="current-theme-name">Console</span>
+        </button>
+
+        <a href="Viral_Parmar_Resume.pdf" download class="btn btn--sm">Resume</a>
+
+        <button type="button" class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="brand-name">Viral Parmar</span>
+      <button type="button" class="theme-drawer-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      
+    <a href="index.html" class="mobile-nav-link ">Overview</a>
+  
+    <a href="projects.html" class="mobile-nav-link active">Projects</a>
+  
+    <a href="compliance.html" class="mobile-nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="mobile-nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="mobile-nav-link ">Terminal</a>
+  
+    <a href="about.html" class="mobile-nav-link ">About</a>
+  
+    <a href="themes.html" class="mobile-nav-link ">50 Themes</a>
+  
+    </div>
+  </aside>
+
+  <!-- Theme Switcher Drawer Modal -->
+  <div class="theme-drawer-backdrop" id="theme-drawer-backdrop"></div>
+  <aside class="theme-drawer" id="theme-drawer" role="dialog" aria-modal="true" aria-label="Hallmark Theme Selector">
+    <div class="theme-drawer-header">
+      <div>
+        <h3 class="theme-drawer-title">Hallmark 50 Themes</h3>
+        <p class="theme-drawer-desc">Select any of the 50 Hallmark design themes to apply across the entire site instantly.</p>
+      </div>
+      <button type="button" class="theme-drawer-close" id="theme-drawer-close" aria-label="Close theme switcher">✕</button>
+    </div>
+
+    <div class="theme-drawer-controls">
+      <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes, fonts, genres...">
+      <div class="theme-genre-tabs" id="theme-genre-tabs">
+        <button class="genre-tab active" data-genre="all">All (50)</button>
+        <button class="genre-tab" data-genre="modern-minimal">Modern Minimal (12)</button>
+        <button class="genre-tab" data-genre="editorial">Editorial (20)</button>
+        <button class="genre-tab" data-genre="atmospheric">Atmospheric (9)</button>
+        <button class="genre-tab" data-genre="playful">Playful (9)</button>
+      </div>
+    </div>
+
+    <div class="theme-drawer-grid" id="theme-drawer-grid"></div>
+
+    <div class="theme-drawer-footer">
+      <button type="button" class="btn btn--sm" id="random-theme-btn">Pick Random Theme</button>
+      <a href="themes.html" class="link-discrete" style="font-size: 0.8125rem; color: var(--color-muted);">Browse 50 themes directory</a>
+    </div>
+  </aside>
+  
+
+  <main id="main-content">
+    
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">Engineering projects and enterprise systems</h1>
+        <p class="section-desc">A complete directory of pharmaceutical manufacturing platforms, human resource suites, desktop productivity tools, and GitHub repositories.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="project-card" id="po-copilot">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">PO Copilot Desktop</h2>
+              <span class="chip chip--accent">Private App</span>
+            </div>
+            <p class="project-card-desc">
+              Custom local productivity hub for enterprise Product Owners. Features persistent SQLite WAL storage, electronic signature verification, and automated Sprint0 backlog sync.
+            </p>
+            <ul class="project-meta-list">
+              <li>28 automated unit tests passing deterministically in 0.895s</li>
+              <li>Two-tier reporting context (daily achievement delta vs. cumulative blocker state)</li>
+              <li>E-signature confirmation gate complying with 21 CFR §11.50</li>
+              <li>Dual mode session maintainer & automated backup verification</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Python, SQLite, Bash</span>
+            <a href="https://github.com/Deady007/po-copilot" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="sprint0">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">Sprint0 Flow Analytics</h2>
+              <span class="chip chip--accent">Analytics Server</span>
+            </div>
+            <p class="project-card-desc">
+              Delivery analytics engine tracking work item flow, cumulative flow diagrams, and story distribution inequality using Gini coefficients.
+            </p>
+            <ul class="project-meta-list">
+              <li>Markov chain completion risk engine estimating milestone delivery</li>
+              <li>Zero-hallucination story verification matching actual Git commits</li>
+              <li>Automated backlog health alerts identifying stuck work items</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Node.js, Flow Metrics</span>
+            <a href="https://github.com/Deady007/sprint0-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="linq">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">LinQ Enterprise HRMS</h2>
+              <span class="chip chip--accent">100% Production</span>
+            </div>
+            <p class="project-card-desc">
+              Comprehensive HRMS and Payroll platform built with Laravel and MySQL. Covers employee lifecycles, biometric attendance integration, and performance reviews.
+            </p>
+            <ul class="project-meta-list">
+              <li>176 total user stories specified and delivered (108 LN + 68 LD)</li>
+              <li>Biometric attendance coupling requiring verified punches for WFH approval</li>
+              <li>Financial guardrail cards capping petty cash allocations</li>
+              <li>Click-to-reassign org hierarchy with immediate manager re-indexing</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">PHP, Laravel, MySQL</span>
+            <a href="https://github.com/Deady007/Linq-hr" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="sppl">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">Suleshvari Pharma ERP</h2>
+              <span class="chip chip--accent">GxP Regulated</span>
+            </div>
+            <p class="project-card-desc">
+              Computerized batch manufacturing platform for active pharmaceutical ingredients (API) and formulations, compliant with US FDA 21 CFR Part 11 and Revised Schedule M.
+            </p>
+            <ul class="project-meta-list">
+              <li>178 of 186 requirement stories verified (95.7% completion)</li>
+              <li>Batch record transition from MPCR to BPCR plant terminology standard</li>
+              <li>Automated QA quarantine locks blocking lot dispensing without approval</li>
+              <li>Out-of-Trend (OOT) deviation isolation from generic plant incidents</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">21 CFR §11, GAMP 5</span>
+            <a href="compliance.html" class="btn btn--sm">Compliance Specs</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="biocare">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">BioCare LIMS Platform</h2>
+              <span class="chip chip--accent">LIMS Architecture</span>
+            </div>
+            <p class="project-card-desc">
+              Laboratory Information Management System (LIMS) managing sample intake, GS1-128 barcode parsing, test workflows, and chain of custody tracking.
+            </p>
+            <ul class="project-meta-list">
+              <li>Sample accessioning with tamper-evident audit trails</li>
+              <li>Automated calibration threshold checks for lab instrumentation</li>
+              <li>COA (Certificate of Analysis) generation with digital sign-off gates</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">PHP, JavaScript, SQL</span>
+            <a href="https://github.com/Deady007/biocare" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="hbp">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">Deepak Foundation Health Portal</h2>
+              <span class="chip chip--accent">Healthcare NGO</span>
+            </div>
+            <p class="project-card-desc">
+              Healthcare beneficiary tracking portal engineered during internship at Deepak Foundation, managing field health survey collection and referral pipelines.
+            </p>
+            <ul class="project-meta-list">
+              <li>Dynamic medical survey forms with field validation rules</li>
+              <li>Patient referral tracking and village-level demographic aggregation</li>
+              <li>Relational schema optimization for high-concurrency offline sync</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Laravel, MySQL, Blade</span>
+            <a href="https://github.com/Deady007/HBP-v3" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="corekit">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">CoreKit Microservices Mesh</h2>
+              <span class="chip chip--accent">Backend Mesh</span>
+            </div>
+            <p class="project-card-desc">
+              Modular service architecture with containerized TypeScript services, REST APIs, and event-driven data streaming.
+            </p>
+            <ul class="project-meta-list">
+              <li>Dockerized container definitions with zero-downtime health probes</li>
+              <li>Authentication middleware with JWT validation and RBAC</li>
+              <li>Shared TypeScript data schemas across frontend and backend</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">TypeScript, Docker, API</span>
+            <a href="https://github.com/Deady007/CoreKit" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+
+        <article class="project-card" id="dpr">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h2 class="project-card-title">DPR Progress Tracker</h2>
+              <span class="chip chip--accent">Web Application</span>
+            </div>
+            <p class="project-card-desc">
+              Daily Progress Reporting (DPR) web system designed for construction and field engineering projects, tracking labor, materials, and milestone sign-offs.
+            </p>
+            <ul class="project-meta-list">
+              <li>Daily milestone ledger with multi-level supervisor approval</li>
+              <li>Material consumption variance alerts against budgeted estimates</li>
+              <li>Exportable PDF and Excel summary generation</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">PHP, JavaScript, CSS</span>
+            <a href="https://github.com/Deady007/DPR" target="_blank" rel="noopener noreferrer" class="btn btn--sm">GitHub @Deady007</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight: 600; color: var(--color-ink);">Viral Parmar</span>
+        <span style="margin-inline: 8px;">(Vadodara, Gujarat, India)</span>
+        <span class="measured">parmarviral397@gmail.com</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Deady007" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parmar-viral-13m711" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="tel:6351493983">+91 6351493983</a>
+        <a href="Viral_Parmar_Resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="js/themes-data.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/console.js"></script>
+</body>
+</html>

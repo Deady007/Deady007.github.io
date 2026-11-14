@@ -3,1316 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viral Parmar: Business Analyst and Cybersecurity Analyst</title>
-  <meta name="description" content="Portfolio of Viral Parmar: Business Analyst, Cybersecurity Analyst Candidate, and Full-Stack Systems Engineer. 50+ GitHub repositories, GxP ERP delivery, 21 CFR Part 11 audit trails.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23191c22'/><text x='50' y='65' font-family='sans-serif' font-size='50' font-weight='bold' fill='%23e09838' text-anchor='middle'>VP</text></svg>">
+  <title>Mission Control | Viral Parmar Portfolio</title>
+  <meta name="description" content="Personal portfolio for Viral Parmar: Business Analyst, Cybersecurity Candidate, and Full-Stack Systems Engineer in Vadodara, India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-/* Hallmark: console (graphite) | stamp: console-graphite-v2-hallmark-pass */
-:root {
-  --color-paper: oklch(17% 0.008 250);
-  --color-paper-2: oklch(21% 0.009 250);
-  --color-paper-3: oklch(13.5% 0.007 250);
-  --color-ink: oklch(95% 0.005 250);
-  --color-ink-2: oklch(83% 0.008 250);
-  --color-muted: oklch(71% 0.01 250);
-  --color-rule: oklch(31% 0.01 250);
-  --color-rule-2: oklch(42% 0.012 250);
-  --color-accent: oklch(82% 0.15 80);
-  --color-accent-ink: oklch(18% 0.04 75);
-  --color-accent-soft: oklch(29% 0.05 80);
-  --color-focus: oklch(82% 0.15 80);
-  --color-cool: oklch(77% 0.12 245);
-  --color-cool-soft: oklch(29% 0.05 245);
-  --color-ok: oklch(82% 0.16 145);
-  --color-ok-soft: oklch(24.5% 0.03 145);
-  --color-bad: oklch(75% 0.18 25);
-  --color-bad-soft: oklch(24.5% 0.035 25);
-  --color-backdrop: oklch(10% 0.01 250 / 0.8);
-
-  --font-display: "Host Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: var(--font-display);
-  --font-outlier: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, monospace;
-
-  --radius-card: 8px;
-  --radius-pill: 4px;
-  --rule-hair: 1px;
-  --tracking-display: -0.03em;
-  --display-weight: 500;
-  --container-max: 1140px;
-}
-
-[data-theme="paper"] {
-  --color-paper: oklch(98% 0.006 85);
-  --color-paper-2: oklch(94% 0.008 85);
-  --color-paper-3: oklch(90% 0.010 85);
-  --color-ink: oklch(19% 0.010 60);
-  --color-ink-2: oklch(30% 0.012 60);
-  --color-muted: oklch(46% 0.015 60);
-  --color-rule: oklch(82% 0.008 85);
-  --color-rule-2: oklch(70% 0.010 85);
-  --color-accent: oklch(54% 0.14 70);
-  --color-accent-ink: #ffffff;
-  --color-accent-soft: oklch(90% 0.04 70);
-  --color-focus: oklch(54% 0.14 70);
-  --color-cool: oklch(52% 0.14 250);
-  --color-cool-soft: oklch(90% 0.04 250);
-  --color-ok: oklch(48% 0.15 145);
-  --color-ok-soft: oklch(92% 0.04 145);
-  --color-bad: oklch(52% 0.17 25);
-  --color-bad-soft: oklch(92% 0.04 25);
-  --color-backdrop: oklch(90% 0.01 85 / 0.8);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow-x: clip;
-  scrollbar-color: var(--color-rule-2) var(--color-paper);
-}
-
-body {
-  overflow-x: clip;
-  background-color: var(--color-paper);
-  color: var(--color-ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.55;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-input, textarea {
-  caret-color: var(--color-accent);
-}
-
-::selection {
-  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
-  color: var(--color-ink);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: 20px;
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: var(--display-weight);
-  letter-spacing: var(--tracking-display);
-  line-height: 1.08;
-  color: var(--color-ink);
-  overflow-wrap: break-word;
-  min-width: 0;
-  text-wrap: balance;
-}
-
-.measured {
-  font-family: var(--font-outlier);
-  font-size: 0.875rem;
-  font-variant-numeric: tabular-nums slashed-zero;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  border: var(--rule-hair) solid var(--color-rule-2);
-  background-color: var(--color-paper-2);
-  color: var(--color-ink);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.btn:hover {
-  border-color: var(--color-ink-2);
-  background-color: var(--color-paper-3);
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-.btn:disabled, button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.btn--primary {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-accent-ink);
-  font-weight: 600;
-}
-
-.btn--primary:hover {
-  background-color: color-mix(in oklab, var(--color-accent) 88%, black);
-  border-color: color-mix(in oklab, var(--color-accent) 88%, black);
-}
-
-.btn--sm {
-  padding: 4px 8px;
-  font-size: 0.8125rem;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
-  border-radius: var(--radius-pill);
-  border: var(--rule-hair) solid var(--color-rule);
-  background-color: var(--color-paper-3);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-muted);
-}
-
-.chip--accent {
-  border-color: var(--color-accent);
-  background-color: var(--color-accent-soft);
-  color: var(--color-ink);
-}
-
-.chip--cool {
-  border-color: var(--color-cool);
-  background-color: var(--color-cool-soft);
-  color: var(--color-ink);
-}
-
-.chip--ok {
-  border-color: var(--color-ok);
-  background-color: var(--color-ok-soft);
-  color: var(--color-ok);
-}
-
-.surface {
-  background-color: var(--color-paper-2);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: color-mix(in oklab, var(--color-paper) 92%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 56px;
-  gap: 16px;
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.brand-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-pill);
-  background-color: var(--color-accent);
-  color: var(--color-accent-ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-outlier);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 0.875rem;
-  color: var(--color-muted);
-  border-bottom: var(--rule-hair) solid transparent;
-  padding-block: 2px;
-}
-
-.nav-links a:hover {
-  color: var(--color-ink);
-  border-bottom-color: var(--color-rule-2);
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-section {
-  padding-block: clamp(36px, 5vw, 64px) 36px;
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-}
-
-.hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: center;
-}
-
-.hero-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  font-family: var(--font-outlier);
-  font-size: 0.75rem;
-  color: var(--color-ok);
-  background-color: var(--color-ok-soft);
-  border: var(--rule-hair) solid var(--color-ok);
-  padding: 4px 8px;
-  border-radius: var(--radius-pill);
-}
-
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: currentColor;
-}
-
-.hero-title {
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  margin-bottom: 8px;
-  letter-spacing: -0.04em;
-}
-
-.hero-subhead {
-  font-size: 1.0625rem;
-  color: var(--color-accent);
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
-.hero-lead {
-  color: var(--color-ink-2);
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 24px;
-  max-width: 580px;
-}
-
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.telemetry-card {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.telemetry-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-  padding-bottom: 12px;
-}
-
-.telemetry-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.stat-tile {
-  background-color: var(--color-paper-3);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-pill);
-  padding: 12px 16px;
-}
-
-.stat-tile-label {
-  font-size: 0.75rem;
-  color: var(--color-muted);
-  margin-bottom: 4px;
-  display: block;
-}
-
-.stat-tile-value {
-  font-family: var(--font-outlier);
-  font-size: 1.5rem;
-  color: var(--color-ink);
-  font-weight: 500;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.stat-tile-context {
-  font-size: 0.6875rem;
-  color: var(--color-muted);
-  margin-top: 4px;
-}
-
-section {
-  padding-block: 48px;
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-}
-
-.section-header {
-  margin-bottom: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.section-title {
-  font-size: clamp(1.5rem, 2.8vw, 2.125rem);
-}
-
-.section-desc {
-  color: var(--color-muted);
-  max-width: 660px;
-  font-size: 0.9375rem;
-}
-
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.filter-btn {
-  padding: 8px 12px;
-  font-size: 0.8125rem;
-  border-radius: var(--radius-pill);
-  border: var(--rule-hair) solid var(--color-rule);
-  background-color: var(--color-paper-2);
-  color: var(--color-muted);
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.filter-btn:hover {
-  border-color: var(--color-rule-2);
-  color: var(--color-ink);
-}
-
-.filter-btn.active {
-  background-color: var(--color-rule-2);
-  border-color: var(--color-accent);
-  color: var(--color-ink);
-  font-weight: 600;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 16px;
-}
-
-.project-card {
-  background-color: var(--color-paper-2);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 16px;
-  transition: border-color 0.15s ease;
-}
-
-.project-card:hover {
-  border-color: var(--color-rule-2);
-}
-
-.project-top {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.project-meta-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.project-title {
-  font-size: 1.125rem;
-  line-height: 1.25;
-}
-
-.project-desc {
-  font-size: 0.875rem;
-  color: var(--color-muted);
-  line-height: 1.5;
-}
-
-.project-highlights {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 0.8125rem;
-  color: var(--color-ink-2);
-  padding-top: 8px;
-  border-top: var(--rule-hair) dashed var(--color-rule);
-}
-
-.project-highlights li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.project-highlights li::before {
-  content: "•";
-  color: var(--color-accent);
-  flex-shrink: 0;
-}
-
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-  gap: 16px;
-}
-
-.skill-block {
-  background-color: var(--color-paper-2);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  padding: 16px;
-}
-
-.skill-category-title {
-  font-size: 0.9375rem;
-  margin-bottom: 12px;
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.skill-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skill-item {
-  font-size: 0.8125rem;
-  color: var(--color-ink-2);
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.skill-item::before {
-  content: "•";
-  color: var(--color-cool);
-}
-
-.audit-table-wrap {
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  overflow-x: auto;
-  background-color: var(--color-paper-2);
-}
-
-table.audit-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8125rem;
-  text-align: left;
-}
-
-table.audit-table th,
-table.audit-table td {
-  padding: 12px 16px;
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-}
-
-table.audit-table th {
-  background-color: var(--color-paper-3);
-  color: var(--color-muted);
-  font-weight: 500;
-  font-size: 0.75rem;
-}
-
-table.audit-table tr:last-child td {
-  border-bottom: none;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.timeline-item {
-  background-color: var(--color-paper-2);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.timeline-header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-@media (min-width: 640px) {
-  .timeline-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
-
-.timeline-company {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.timeline-role {
-  color: var(--color-accent);
-  font-size: 0.9375rem;
-}
-
-.timeline-period {
-  font-family: var(--font-outlier);
-  font-size: 0.8125rem;
-  color: var(--color-cool);
-}
-
-.timeline-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 0.875rem;
-  color: var(--color-ink-2);
-}
-
-.timeline-bullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.timeline-bullets li::before {
-  content: "•";
-  color: var(--color-rule-2);
-  flex-shrink: 0;
-}
-
-.console-wrap {
-  background-color: var(--color-paper-3);
-  border: var(--rule-hair) solid var(--color-rule);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  font-family: var(--font-outlier);
-}
-
-.console-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 16px;
-  background-color: var(--color-paper-2);
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-  font-size: 0.75rem;
-  color: var(--color-muted);
-}
-
-.console-body {
-  padding: 16px;
-  min-height: 200px;
-  max-height: 340px;
-  overflow-y: auto;
-  font-size: 0.8125rem;
-  line-height: 1.6;
-}
-
-.console-output {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 12px;
-  color: var(--color-ink-2);
-}
-
-.console-prompt-line {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.prompt-symbol {
-  color: var(--color-accent);
-  user-select: none;
-}
-
-.console-input {
-  flex: 1;
-  background: none;
-  border: none;
-  color: var(--color-ink);
-  font-family: inherit;
-  font-size: inherit;
-  outline: none;
-}
-
-footer {
-  padding-block: 40px;
-  background-color: var(--color-paper-3);
-  border-top: var(--rule-hair) solid var(--color-rule);
-  font-size: 0.8125rem;
-  color: var(--color-muted);
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .footer-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
-
-.footer-links {
-  display: flex;
-  gap: 16px;
-}
-
-@media (max-width: 860px) {
-  .hero-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .nav-links {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>(function(){const t=localStorage.getItem('hallmark_theme')||'console';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-  <!-- Header Navigation -->
-  <header>
-    <div class="container nav-inner">
-      <a href="#overview" class="nav-brand" aria-label="Viral Parmar Home">
-        <div class="brand-mark">VP</div>
-        <span>Viral Parmar</span>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <span class="status-indicator"></span>
+        <span class="brand-name">Viral Parmar</span>
+        <span class="brand-role">Systems & BA</span>
       </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#projects">Work and delivery</a></li>
-          <li><a href="#compliance">Security and GxP</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#console">Audit console</a></li>
-        </ul>
+      <nav class="site-nav" id="site-nav">
+        
+    <a href="index.html" class="nav-link active">Overview</a>
+  
+    <a href="projects.html" class="nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="nav-link ">Terminal</a>
+  
+    <a href="about.html" class="nav-link ">About</a>
+  
+    <a href="themes.html" class="nav-link ">50 Themes</a>
+  
       </nav>
 
-      <div class="nav-actions">
-        <button id="theme-toggle" class="btn btn--sm" aria-label="Toggle theme">
-          <span class="measured" id="theme-indicator">Paper</span>
+      <div class="header-actions">
+        <button type="button" class="theme-trigger-btn" id="theme-trigger-btn" aria-label="Open Hallmark Theme Switcher">
+          <span>Theme:</span>
+          <span class="theme-current-label" id="current-theme-name">Console</span>
         </button>
-        <a href="Viral_Parmar_Resume.pdf" download class="btn btn--primary btn--sm" aria-label="Download Resume PDF">
-          <span>Resume PDF</span>
-        </a>
+
+        <a href="Viral_Parmar_Resume.pdf" download class="btn btn--sm">Resume</a>
+
+        <button type="button" class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="overview" class="hero-section">
-      <div class="container hero-layout">
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="brand-name">Viral Parmar</span>
+      <button type="button" class="theme-drawer-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      
+    <a href="index.html" class="mobile-nav-link active">Overview</a>
+  
+    <a href="projects.html" class="mobile-nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="mobile-nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="mobile-nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="mobile-nav-link ">Terminal</a>
+  
+    <a href="about.html" class="mobile-nav-link ">About</a>
+  
+    <a href="themes.html" class="mobile-nav-link ">50 Themes</a>
+  
+    </div>
+  </aside>
+
+  <!-- Theme Switcher Drawer Modal -->
+  <div class="theme-drawer-backdrop" id="theme-drawer-backdrop"></div>
+  <aside class="theme-drawer" id="theme-drawer" role="dialog" aria-modal="true" aria-label="Hallmark Theme Selector">
+    <div class="theme-drawer-header">
+      <div>
+        <h3 class="theme-drawer-title">Hallmark 50 Themes</h3>
+        <p class="theme-drawer-desc">Select any of the 50 Hallmark design themes to apply across the entire site instantly.</p>
+      </div>
+      <button type="button" class="theme-drawer-close" id="theme-drawer-close" aria-label="Close theme switcher">✕</button>
+    </div>
+
+    <div class="theme-drawer-controls">
+      <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes, fonts, genres...">
+      <div class="theme-genre-tabs" id="theme-genre-tabs">
+        <button class="genre-tab active" data-genre="all">All (50)</button>
+        <button class="genre-tab" data-genre="modern-minimal">Modern Minimal (12)</button>
+        <button class="genre-tab" data-genre="editorial">Editorial (20)</button>
+        <button class="genre-tab" data-genre="atmospheric">Atmospheric (9)</button>
+        <button class="genre-tab" data-genre="playful">Playful (9)</button>
+      </div>
+    </div>
+
+    <div class="theme-drawer-grid" id="theme-drawer-grid"></div>
+
+    <div class="theme-drawer-footer">
+      <button type="button" class="btn btn--sm" id="random-theme-btn">Pick Random Theme</button>
+      <a href="themes.html" class="link-discrete" style="font-size: 0.8125rem; color: var(--color-muted);">Browse 50 themes directory</a>
+    </div>
+  </aside>
+  
+
+  <main id="main-content">
+    
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="hero-title">Viral Parmar</h1>
+        <div class="hero-subhead">Business analyst, cybersecurity candidate, and full-stack systems engineer</div>
+
+        <div class="hero-badge">
+          <span class="status-indicator"></span>
+          <span>Available for business analyst and cybersecurity analyst roles</span>
+        </div>
+
+        <p class="hero-lead">
+          Translating enterprise requirements into deterministic stories, electronic records, and access-governed workflows.
+        </p>
+
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn--primary">View enterprise projects</a>
+          <a href="compliance.html" class="btn">Security & GxP matrix</a>
+          <a href="themes.html" class="btn">Hallmark 50-theme studio</a>
+        </div>
+      </div>
+
+      <!-- Telemetry Card -->
+      <div class="surface">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <span class="measured" style="color: var(--color-cool); font-size: 0.8125rem;">Live system telemetry</span>
+          <span class="chip chip--accent">BCA 2025</span>
+        </div>
+
+        <div class="telemetry-grid">
+          <div class="telemetry-item">
+            <div class="telemetry-num measured">50+</div>
+            <div class="telemetry-label">GitHub repositories (@Deady007)</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-num measured">95.7%</div>
+            <div class="telemetry-label">SPPL ERP completion (178/186)</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-num measured">100%</div>
+            <div class="telemetry-label">LinQ HRMS delivery (176 stories)</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-num measured">28 Tests</div>
+            <div class="telemetry-label">PO Copilot unit suite (0.895s)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disciplinary Competencies -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Core technical & analytical disciplines</h2>
+        <p class="section-desc">Practical capability across regulatory data integrity, structured product ownership, and multi-tier application development.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="surface">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Cybersecurity & data integrity</h3>
+            <span class="chip chip--accent">21 CFR §11</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--color-muted); margin-bottom: 12px;">
+            Ensuring electronic records comply with US FDA 21 CFR Part 11, EU GMP Annex 11, and ALCOA+ principles through gapless audit trails and RBAC.
+          </p>
+          <ul class="project-meta-list">
+            <li>Immutable change logs & actor attribution</li>
+            <li>Session timeout & invalidation boundaries</li>
+            <li>Tata Group threat intelligence & anomaly detection</li>
+          </ul>
+        </div>
+
+        <div class="surface">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Agile product ownership</h3>
+            <span class="chip chip--accent">Sprint0 PO</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--color-muted); margin-bottom: 12px;">
+            Decomposing client operations into developer-ready requirement stories, form matrices, and acceptance criteria.
+          </p>
+          <ul class="project-meta-list">
+            <li>Given/When/Then acceptance criteria</li>
+            <li>Sprint0 flow analytics & Markov delivery risk modeling</li>
+            <li>Cross-functional stakeholder consensus</li>
+          </ul>
+        </div>
+
+        <div class="surface">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.125rem; font-weight: 600;">Full-stack development</h3>
+            <span class="chip chip--accent">Laravel & React</span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--color-muted); margin-bottom: 12px;">
+            Architecting database-backed web applications, microservices, and client tooling using modern web technologies.
+          </p>
+          <ul class="project-meta-list">
+            <li>PHP/Laravel, Python Flask, TypeScript & Node.js</li>
+            <li>SQLite WAL mode, MySQL, MongoDB schema design</li>
+            <li>Docker containerization & REST API engineering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Highlights -->
+  <section class="section" style="border-top: var(--rule-hair, 1px) solid var(--color-rule);">
+    <div class="container">
+      <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
         <div>
-          <div class="hero-status">
-            <span class="pulse-dot"></span>
-            <span>Available for business analyst and cybersecurity analyst roles</span>
-          </div>
-
-          <h1 class="hero-title">Viral Parmar</h1>
-          <div class="hero-subhead">Business analyst, cybersecurity candidate, and full-stack systems engineer</div>
-
-          <p class="hero-lead">
-            Translating enterprise requirements into deterministic stories, electronic records, and access-governed workflows.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn--primary">View enterprise work</a>
-            <a href="#compliance" class="btn">Security and compliance</a>
-            <a href="https://github.com/Deady007" target="_blank" rel="noopener noreferrer" class="btn">
-              <span class="measured">GitHub @Deady007</span>
-            </a>
-          </div>
+          <h2 class="section-title">Featured enterprise systems</h2>
+          <p class="section-desc">Active systems engineered for pharmaceutical manufacturing, enterprise human resources, and developer productivity.</p>
         </div>
-
-        <!-- Telemetry Panel -->
-        <div class="surface telemetry-card">
-          <div class="telemetry-header">
-            <span class="measured" style="color: var(--color-cool);">System status: verified record</span>
-            <span class="chip chip--accent">BCA 2025</span>
-          </div>
-
-          <div class="telemetry-grid">
-            <div class="stat-tile">
-              <span class="stat-tile-label">GitHub repositories</span>
-              <div class="stat-tile-value">50+</div>
-              <div class="stat-tile-context">Full-stack, CLI, and tooling</div>
-            </div>
-
-            <div class="stat-tile">
-              <span class="stat-tile-label">SPPL ERP stories</span>
-              <div class="stat-tile-value">95.7%</div>
-              <div class="stat-tile-context">178 done, 8 open, 186 total</div>
-            </div>
-
-            <div class="stat-tile">
-              <span class="stat-tile-label">LinQ HR backlog</span>
-              <div class="stat-tile-value">100%</div>
-              <div class="stat-tile-context">176 delivered across NS and DS</div>
-            </div>
-
-            <div class="stat-tile">
-              <span class="stat-tile-label">Job simulations</span>
-              <div class="stat-tile-value">Tata and Deloitte</div>
-              <div class="stat-tile-context">Cybersecurity and data analytics</div>
-            </div>
-          </div>
-
-          <div style="font-size: 0.8125rem; color: var(--color-muted); border-top: var(--rule-hair) solid var(--color-rule); padding-top: 12px;">
-            <span style="color: var(--color-ink-2); font-weight: 500;">Focus areas:</span> 21 CFR Part 11 audit trails, ALCOA+ data integrity, Sprint0 backlog telemetry, dynamic form validation matrices.
-          </div>
-        </div>
+        <a href="projects.html" class="btn">View all projects and repositories</a>
       </div>
-    </section>
 
-    <!-- Core Competencies Section -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Technical and analytical disciplines</h2>
-          <p class="section-desc">
-            Bridging technical implementation with formal business requirements and cybersecurity monitoring.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <!-- Cybersecurity & Compliance -->
-          <div class="skill-block">
-            <div class="skill-category-title">
-              <span>Cybersecurity and integrity</span>
-              <span class="chip chip--cool">GxP and CSV</span>
+      <div class="cards-grid">
+        <article class="project-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 class="project-card-title">PO Copilot Desktop</h3>
+              <span class="chip chip--accent">Private Tool</span>
             </div>
-            <ul class="skill-list">
-              <li class="skill-item">21 CFR Part 11 compliance (§11.10, §11.50 dual signatures)</li>
-              <li class="skill-item">Audit trail gap analysis and timestamp verification</li>
-              <li class="skill-item">Role-based access control (RBAC) and session timeouts</li>
-              <li class="skill-item">Tata Group Cybersecurity Analyst simulation</li>
-              <li class="skill-item">Incident, OOT, and OOD deviation segregation</li>
-              <li class="skill-item">Access-related risk analysis and tamper evidence</li>
-            </ul>
-          </div>
-
-          <!-- Business Analysis -->
-          <div class="skill-block">
-            <div class="skill-category-title">
-              <span>Business analysis</span>
-              <span class="chip chip--accent">Agile PO</span>
-            </div>
-            <ul class="skill-list">
-              <li class="skill-item">User stories and deterministic acceptance criteria</li>
-              <li class="skill-item">Sprint0 backlog grooming and Markov risk engine</li>
-              <li class="skill-item">Process workflow mapping and entity relationships</li>
-              <li class="skill-item">Form validation matrices and boundary rules</li>
-              <li class="skill-item">Blocker tracking and cross-functional coordination</li>
-              <li class="skill-item">Deloitte Australia Data Analytics simulation</li>
-            </ul>
-          </div>
-
-          <!-- Engineering & Frameworks -->
-          <div class="skill-block">
-            <div class="skill-category-title">
-              <span>Full-stack development</span>
-              <span class="chip">Engineering</span>
-            </div>
-            <ul class="skill-list">
-              <li class="skill-item">Python (Flask, CLI daemons, automation tooling)</li>
-              <li class="skill-item">PHP and Laravel (dynamic forms, Eloquent ORM)</li>
-              <li class="skill-item">JavaScript, TypeScript, React, HTML5/CSS</li>
-              <li class="skill-item">SQLite WAL, MySQL, MongoDB</li>
-              <li class="skill-item">Docker containerization and microservices</li>
-              <li class="skill-item">REST API design and Postman verification</li>
-            </ul>
-          </div>
-
-          <!-- Tools & Environments -->
-          <div class="skill-block">
-            <div class="skill-category-title">
-              <span>Environment and tooling</span>
-              <span class="chip">Operations</span>
-            </div>
-            <ul class="skill-list">
-              <li class="skill-item">Git version control and GitHub CLI</li>
-              <li class="skill-item">Linux / Bash administration and systemd</li>
-              <li class="skill-item">Jira, Sprint0 issue lifecycle tracking</li>
-              <li class="skill-item">Excel data models (Pivot Tables, VLOOKUP)</li>
-              <li class="skill-item">Playwright browser automation and testing</li>
-              <li class="skill-item">Markdown and technical protocol documentation</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects & Delivery Matrix -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Enterprise delivery and open-source systems</h2>
-          <p class="section-desc">
-            Directly referenced from client implementations and public GitHub repositories.
-          </p>
-        </div>
-
-        <div class="filter-bar" role="tablist" aria-label="Project filter">
-          <button class="filter-btn active" data-filter="all">All deliverables (7)</button>
-          <button class="filter-btn" data-filter="gxp">Regulated GxP and ERP</button>
-          <button class="filter-btn" data-filter="security">Security and governance</button>
-          <button class="filter-btn" data-filter="fullstack">Full-stack engineering</button>
-        </div>
-
-        <div class="projects-grid">
-          <!-- SPPL ERP -->
-          <article class="project-card" data-category="gxp security">
-            <div class="project-top">
-              <h3 class="project-title">SPPL Pharmaceutical ERP and BPCR</h3>
-              <div class="project-meta-row">
-                <span class="chip chip--accent">Regulated GxP</span>
-                <span class="measured muted">SPPL board</span>
-              </div>
-              <p class="project-desc">
-                GxP manufacturing, SCM, and quality management ERP for Suleshvari Pharma across 3 manufacturing sites. Governed under 21 CFR Part 11 and Revised Schedule M.
-              </p>
-              <ul class="project-highlights">
-                <li>Standardized shopfloor manufacturing records from MPCR to BPCR (SPPL-82)</li>
-                <li>Enforced mandatory QA quarantine gates before repacking issuance (SPPL-40)</li>
-                <li>Decoupled Out-of-Trend (OOT) investigations from general deviations (SPPL-184)</li>
-                <li>178 of 186 requirement stories verified and delivered (95.7% completion)</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">21 CFR Part 11</span>
-                <span class="chip">Laravel</span>
-                <span class="chip">MySQL</span>
-                <span class="chip">Audit trail</span>
-              </div>
-              <span class="measured" style="color: var(--color-ok);">Lifecycle: In validation (OQ v4.0)</span>
-            </div>
-          </article>
-
-          <!-- PO Copilot -->
-          <article class="project-card" data-category="security fullstack">
-            <div class="project-top">
-              <h3 class="project-title">PO Copilot and Telemetry State Machine</h3>
-              <div class="project-meta-row">
-                <span class="chip chip--cool">Tooling architecture</span>
-                <a href="https://github.com/Deady007/po-copilot" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/po-copilot</a>
-              </div>
-              <p class="project-desc">
-                Offline-first executive Product Owner copilot and SQLite WAL governance engine with AES-256 encrypted backups, automated standup generation, and Android APK bridge.
-              </p>
-              <ul class="project-highlights">
-                <li>SQLite WAL architecture with background synchronization daemon</li>
-                <li>ALCOA+ electronic signature manifests (§11.50 dual-challenge modals)</li>
-                <li>Sprint0 MCP telemetry bridge with 15-minute background refresh</li>
-                <li>28 unit tests passing in under 1 second; zero cloud data leaks</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">Python</span>
-                <span class="chip">SQLite WAL</span>
-                <span class="chip">HTML/Tailwind</span>
-                <span class="chip">Android SDK</span>
-              </div>
-              <a href="https://github.com/Deady007/po-copilot" target="_blank" rel="noopener noreferrer" class="btn btn--sm">View GitHub repo</a>
-            </div>
-          </article>
-
-          <!-- Sprint0 Dashboard -->
-          <article class="project-card" data-category="security fullstack">
-            <div class="project-top">
-              <h3 class="project-title">Sprint0 Flow and Markov Risk Engine</h3>
-              <div class="project-meta-row">
-                <span class="chip chip--cool">Analytics engine</span>
-                <a href="https://github.com/Deady007/sprint0-dashboard" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/sprint0-dashboard</a>
-              </div>
-              <p class="project-desc">
-                Quantitative flow analytics server tracking developer throughput, team workload Gini inequality coefficient, and Markov chain milestone risk predictions.
-              </p>
-              <ul class="project-highlights">
-                <li>REST API server with offline JSON caching for 300+ Sprint0 stories</li>
-                <li>Team workload Gini coefficient calculating distribution balance</li>
-                <li>Markov delivery risk models predicting sprint completion variance</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">Python</span>
-                <span class="chip">Markov models</span>
-                <span class="chip">REST APIs</span>
-                <span class="chip">Tailwind CSS</span>
-              </div>
-              <a href="https://github.com/Deady007/sprint0-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn--sm">View GitHub repo</a>
-            </div>
-          </article>
-
-          <!-- LinQ Enterprise HRMS -->
-          <article class="project-card" data-category="gxp security">
-            <div class="project-top">
-              <h3 class="project-title">LinQ Enterprise HR Platform (NS and DS)</h3>
-              <div class="project-meta-row">
-                <span class="chip chip--accent">Enterprise HRMS</span>
-                <a href="https://github.com/Deady007/Linq-hr" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/Linq-hr</a>
-              </div>
-              <p class="project-desc">
-                Enterprise HRMS covering complex corporate leave accrual policies, petty cash budget capping, two-tier 360 appraisal cycles, and biometric attendance coupling.
-              </p>
-              <ul class="project-highlights">
-                <li>Automated mid-month joining leave entitlement logic (LN-2)</li>
-                <li>Petty cash budget capping card preventing discretionary over-draws (LN-105)</li>
-                <li>Coupled WFH requests directly with biometric punch anomalies (LN-97)</li>
-                <li>176 of 176 backlog stories delivered across two enterprise instances</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">Full-Stack</span>
-                <span class="chip">Biometrics</span>
-                <span class="chip">RBAC matrix</span>
-                <span class="chip">Agile PO</span>
-              </div>
-              <span class="measured" style="color: var(--color-ok);">Production deployed and handed over</span>
-            </div>
-          </article>
-
-          <!-- Biocare LIMS -->
-          <article class="project-card" data-category="gxp fullstack">
-            <div class="project-top">
-              <h3 class="project-title">Biocare Diagnostics LIMS</h3>
-              <div class="project-meta-row">
-                <span class="chip chip--accent">Laboratory LIMS</span>
-                <a href="https://github.com/Deady007/biocare" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/biocare</a>
-              </div>
-              <p class="project-desc">
-                Laboratory Information Management System managing sample specimen chain-of-custody, GS1-128 barcode serialization ingestion, and tamper-evident sign-off flows.
-              </p>
-              <ul class="project-highlights">
-                <li>Handheld Zebra scanner GS1-128 barcode payload parsing specification</li>
-                <li>Specimen accessioning with chain-of-custody tracking</li>
-                <li>Technician entry with dual-pathologist verification checkpoints</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">JavaScript</span>
-                <span class="chip">GS1-128</span>
-                <span class="chip">Barcode telemetry</span>
-                <span class="chip">HTML5</span>
-              </div>
-              <a href="https://github.com/Deady007/biocare" target="_blank" rel="noopener noreferrer" class="btn btn--sm">View GitHub repo</a>
-            </div>
-          </article>
-
-          <!-- CoreKit -->
-          <article class="project-card" data-category="fullstack">
-            <div class="project-top">
-              <h3 class="project-title">CoreKit Distributed Architecture</h3>
-              <div class="project-meta-row">
-                <span class="chip">Microservices</span>
-                <a href="https://github.com/Deady007/CoreKit" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/CoreKit</a>
-              </div>
-              <p class="project-desc">
-                Modular microservices framework separating backend services, Docker environments, and responsive frontend dashboards.
-              </p>
-              <ul class="project-highlights">
-                <li>Separation of corekit-backend, corekit-frontend, and tracker services</li>
-                <li>Containerized Docker deployment workflows and typed contracts</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">Docker</span>
-                <span class="chip">TypeScript</span>
-                <span class="chip">Node.js</span>
-                <span class="chip">Microservices</span>
-              </div>
-              <a href="https://github.com/Deady007/CoreKit" target="_blank" rel="noopener noreferrer" class="btn btn--sm">View GitHub repo</a>
-            </div>
-          </article>
-
-          <!-- Health Monitoring System HBP-v3 -->
-          <article class="project-card" data-category="fullstack">
-            <div class="project-top">
-              <h3 class="project-title">Healthcare System (Deepak Foundation)</h3>
-              <div class="project-meta-row">
-                <span class="chip">Healthcare portal</span>
-                <a href="https://github.com/Deady007/HBP-v3" target="_blank" rel="noopener noreferrer" class="measured" style="text-decoration: underline;">Deady007/HBP-v3</a>
-              </div>
-              <p class="project-desc">
-                Health-focused tracking system built during development internship at Deepak Foundation. Handles structured clinical forms, reporting, and patient records.
-              </p>
-              <ul class="project-highlights">
-                <li>Dynamic multi-step patient assessment and intake forms</li>
-                <li>Reporting modules with MySQL relational query optimization</li>
-                <li>Role-based navigation protecting sensitive clinical data</li>
-              </ul>
-            </div>
-            <div>
-              <div class="tag-row" style="margin-bottom: 12px;">
-                <span class="chip">PHP / Laravel</span>
-                <span class="chip">MySQL</span>
-                <span class="chip">Blade</span>
-                <span class="chip">Agile</span>
-              </div>
-              <a href="https://github.com/Deady007/HBP-v3" target="_blank" rel="noopener noreferrer" class="btn btn--sm">View GitHub repo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Compliance Focus Section -->
-    <section id="compliance">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Security monitoring and regulatory verification</h2>
-          <p class="section-desc">
-            Evidence-based verification framework applied across GxP computerized validation and security analyst operations.
-          </p>
-        </div>
-
-        <div class="audit-table-wrap">
-          <table class="audit-table">
-            <thead>
-              <tr>
-                <th>Scope and standard</th>
-                <th>Requirement</th>
-                <th>Implementation evidence</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="measured" style="color: var(--color-accent);">21 CFR §11.10(e)</td>
-                <td>Audit trails for computer-generated time-stamped records</td>
-                <td>Gapless SQLite WAL event streams and audit tables logging user ID, timestamp, old value, and new value.</td>
-                <td><span class="chip chip--ok">Verified</span></td>
-              </tr>
-              <tr>
-                <td class="measured" style="color: var(--color-accent);">21 CFR §11.50</td>
-                <td>Dual-challenge electronic signatures (printed name, date and time, meaning)</td>
-                <td>Enforced username and password challenge modal for batch record sign-offs and qualification protocols.</td>
-                <td><span class="chip chip--ok">Verified</span></td>
-              </tr>
-              <tr>
-                <td class="measured" style="color: var(--color-cool);">Tata simulation</td>
-                <td>Security operations, incident investigation, endpoint anomalies</td>
-                <td>Analyzed network logs, prioritized vulnerability alerts, and formulated incident escalation reports.</td>
-                <td><span class="chip chip--cool">Completed</span></td>
-              </tr>
-              <tr>
-                <td class="measured" style="color: var(--color-cool);">Deloitte simulation</td>
-                <td>Data accuracy, anomaly awareness, forensic analytics</td>
-                <td>Data quality audits, anomaly detection in tabular datasets, and structured stakeholder reporting.</td>
-                <td><span class="chip chip--cool">Completed</span></td>
-              </tr>
-              <tr>
-                <td class="measured" style="color: var(--color-accent);">Schedule M and Part 211</td>
-                <td>Segregation of Out-of-Trend (OOT) investigations</td>
-                <td>Separated OOT investigation forms from generic plant deviations in SPPL QMS to preserve data integrity.</td>
-                <td><span class="chip chip--ok">Enforced</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Professional Experience Timeline -->
-    <section id="experience">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Experience and education</h2>
-        </div>
-
-        <div class="timeline">
-          <!-- Fiscal Ox -->
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">Fiscal Ox</h3>
-                <div class="timeline-role">Business Analyst</div>
-              </div>
-              <span class="timeline-period">July 2025 to Present: Vadodara, India</span>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Gather and translate business and technical requirements into structured user stories, acceptance criteria, and developer work items for pharmaceutical ERP and HRMS platforms.</li>
-              <li>Analyze software workflows, clarify expected system behavior, and coordinate with engineering teams to resolve requirement gaps and implementation issues.</li>
-              <li>Review completed work against documented requirements and acceptance criteria, identify discrepancies, and track follow-up actions across SPPL, LinQ NS, and Linq DS boards.</li>
-              <li>Maintain issue and dependency visibility across implementation projects, documenting blockers, owners, and outstanding client inputs.</li>
-              <li>Track sprint KPIs and delivery velocity, supporting data-informed prioritization and continuous quality improvement.</li>
-            </ul>
-          </div>
-
-          <!-- Deepak Foundation -->
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">Deepak Foundation</h3>
-                <div class="timeline-role">Full Stack Developer / Laravel Intern</div>
-              </div>
-              <span class="timeline-period">December 2024 to March 2025: Vadodara, India</span>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Developed and maintained a health-focused tracking and reporting system using Laravel, PHP, and MySQL.</li>
-              <li>Built dynamic forms, reporting modules, and structured clinical data workflows with role-based access safeguards.</li>
-              <li>Collaborated with cross-functional team members in an Agile Scrum environment across sprint planning and delivery cycles.</li>
-            </ul>
-          </div>
-
-          <!-- Education -->
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">The Maharaja Sayajirao University of Baroda</h3>
-                <div class="timeline-role">Bachelor of Computer Applications (BCA)</div>
-              </div>
-              <span class="timeline-period">October 2022 to May 2025: Vadodara, India</span>
-            </div>
-            <p style="font-size: 0.875rem; color: var(--color-ink-2);">
-              Foundational coursework in database management systems (DBMS), software engineering, data structures, network security, web architecture, and object-oriented programming.
+            <p class="project-card-desc">
+              Local desktop workflow tool with SQLite WAL mode persistence, 21 CFR Part 11 electronic signatures, and zero-hallucination activity logging.
             </p>
+            <ul class="project-meta-list">
+              <li>28 automated unit tests executed in 0.895s</li>
+              <li>Two-tier reporting engine (daily delta + cumulative blockers)</li>
+              <li>Dual mode session maintainer & automated backup verification</li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Security & Telemetry Console -->
-    <section id="console">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Interactive audit and telemetry console</h2>
-          <p class="section-desc">
-            Type commands below to query repository statuses, audit data integrity, or verify credentials directly.
-          </p>
-        </div>
-
-        <div class="console-wrap">
-          <div class="console-header">
-            <span class="measured">viral@security-audit-console: ~</span>
-            <span class="chip chip--accent" style="padding: 2px 6px; font-size: 0.6875rem;">Online</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Python, SQLite, Bash</span>
+            <a href="projects.html#po-copilot" class="btn btn--sm">Specs & Details</a>
           </div>
+        </article>
 
-          <div class="console-body" id="console-body">
-            <div class="console-output" id="console-output">
-              <div>Viral Parmar Telemetry Console [Version 2.0.0]</div>
-              <div>Type <span style="color: var(--color-accent); font-weight: 600;">help</span> to inspect available commands.</div>
+        <article class="project-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 class="project-card-title">SPPL Pharma ERP</h3>
+              <span class="chip chip--accent">GxP Pharma</span>
             </div>
-
-            <form id="console-form" class="console-prompt-line" onsubmit="handleConsoleSubmit(event)">
-              <span class="prompt-symbol">guest@vp-portfolio:~$</span>
-              <input type="text" id="console-input" class="console-input" autocomplete="off" spellcheck="false" aria-label="Console input" placeholder="help, repos, audit --project sppl, contact...">
-            </form>
+            <p class="project-card-desc">
+              Regulated pharmaceutical manufacturing execution system handling Master & Batch Production Control Records (MPCR/BPCR) and quarantine gates.
+            </p>
+            <ul class="project-meta-list">
+              <li>178 of 186 requirement stories verified (95.7% complete)</li>
+              <li>Mandatory QA quarantine lock before repack dispensing</li>
+              <li>Out-of-Trend (OOT) deviation isolation from plant incidents</li>
+            </ul>
           </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">21 CFR §11, GAMP 5</span>
+            <a href="compliance.html#sppl" class="btn btn--sm">Audit Trail</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 class="project-card-title">LinQ Enterprise HRMS</h3>
+              <span class="chip chip--accent">100% Delivered</span>
+            </div>
+            <p class="project-card-desc">
+              Multi-entity human resource management system featuring biometric punch integration, leave accrual guardrails, and dynamic org charts.
+            </p>
+            <ul class="project-meta-list">
+              <li>176 total stories delivered (108 LinQ NS + 68 LinQ DS)</li>
+              <li>WFH requests coupled directly to biometric device punches</li>
+              <li>Petty cash budget capping and notice period refund gates</li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: var(--rule-hair, 1px) solid var(--color-rule); padding-top: 12px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Laravel, MySQL, Biometric</span>
+            <a href="projects.html#linq" class="btn btn--sm">Specs & Details</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Section -->
+  <section class="section" style="border-top: var(--rule-hair, 1px) solid var(--color-rule);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Interactive audit and telemetry console</h2>
+        <p class="section-desc">Execute commands directly to query repository statuses, run GxP audits, or switch Hallmark design themes.</p>
+      </div>
+
+      <div class="terminal-window" id="portfolio-terminal">
+        <div class="terminal-bar">
+          <span class="measured">viral@security-audit-console: ~</span>
+          <span class="chip chip--accent" style="font-size: 0.6875rem;">Online</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-output">
+            <div>Viral Parmar Telemetry Console [Version 2.0.0]</div>
+            <div>Type <span style="color: var(--color-accent); font-weight: 600;">help</span> to inspect available commands, or <span style="color: var(--color-accent); font-weight: 600;">theme &lt;slug&gt;</span> to test themes.</div>
+          </div>
+          <form class="terminal-form">
+            <span class="prompt-tag">guest@vp-portfolio:~$</span>
+            <input type="text" class="terminal-input" placeholder="help, repos, audit --project sppl, theme blueprint..." autocomplete="off" spellcheck="false">
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer>
+  
+  <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <span style="font-weight: 600; color: var(--color-ink);">Viral Parmar</span>
@@ -1328,179 +345,10 @@ footer {
       </div>
     </div>
   </footer>
+  
 
-  <script>
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIndicator = document.getElementById('theme-indicator');
-    
-    function setTheme(theme) {
-      if (theme === 'paper') {
-        document.documentElement.setAttribute('data-theme', 'paper');
-        themeIndicator.textContent = 'Graphite';
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-        themeIndicator.textContent = 'Paper';
-      }
-      localStorage.setItem('vp_theme', theme);
-    }
-
-    const savedTheme = localStorage.getItem('vp_theme') || 'graphite';
-    setTheme(savedTheme);
-
-    themeToggleBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      setTheme(current === 'paper' ? 'graphite' : 'paper');
-    });
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-
-        projectCards.forEach(card => {
-          if (filter === 'all' || card.dataset.category.includes(filter)) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    const consoleOutput = document.getElementById('console-output');
-    const consoleInput = document.getElementById('console-input');
-    const consoleBody = document.getElementById('console-body');
-
-    const commands = {
-      help: () => `
-Available Commands:
-  help                     Show this help reference
-  whoami                   Display summary bio and current target roles
-  skills                   List categorized technical & security proficiencies
-  repos                    Query featured GitHub repositories (@Deady007)
-  audit --project sppl     Run GxP 21 CFR Part 11 compliance audit on SPPL ERP
-  audit --project linq     Run organizational policy verification on LinQ HRMS
-  telemetry                View real-time delivery completion and metrics
-  certifications           List completed job simulations and degree details
-  contact                  Display direct email, phone, and profile links
-  clear                    Clear the console output
-`,
-      whoami: () => `
-Viral Parmar
-Business Analyst | Cybersecurity Analyst Candidate | Full-Stack Systems
-Location: Vadodara, Gujarat, India
-Education: Bachelor of Computer Applications (BCA), MSU Baroda (2025)
-Experience: Business Analyst at Fiscal Ox (Jul 2025 - Present)
-            Full Stack Laravel Intern at Deepak Foundation (Dec 2024 - Mar 2025)
-Focus: Bridging software engineering, GxP CSV data integrity, and cybersecurity monitoring.
-`,
-      skills: () => `
-[Cybersecurity & Compliance]
-  • 21 CFR Part 11 Electronic Records & Signatures (§11.10, §11.50)
-  • Gapless Audit Trail Analysis & ALCOA+ Data Integrity Verification
-  • Role-Based Access Control (RBAC) & Session Timeout Configuration
-  • Tata Group Cybersecurity Analyst Simulation (Threat Analysis, Anomaly Detection)
-  • Incident, OOT, and OOD Segregation
-
-[Business Analysis & Agile PO]
-  • Structured User Stories & Given/When/Then Acceptance Criteria
-  • Sprint0 Backlog Grooming & Markov Milestone Risk Estimation
-  • Workflow Process Mapping & Form Validation Matrices
-  • Cross-Functional Blocker Ownership
-
-[Development & Databases]
-  • Languages: Python, PHP, JavaScript, TypeScript, SQL
-  • Frameworks: Laravel, React, Node.js, Flask, Tailwind CSS
-  • Storage: SQLite WAL, MySQL, MongoDB, Docker
-`,
-      repos: () => `
-Featured Repositories on github.com/Deady007 (50+ Total):
-  1. po-copilot               Private PO Copilot app, SQLite WAL, 28 tests, e-signatures
-  2. sprint0-dashboard        Flow analytics server, Markov risk engine, Gini coefficient
-  3. Linq-hr                  Enterprise HRMS, biometric attendance coupling, 360 reviews
-  4. biocare                  LIMS platform, GS1-128 barcode parsing, chain of custody
-  5. CoreKit                  Microservices mesh, Docker containers, TypeScript APIs
-  6. HBP-v3                   Healthcare portal, dynamic medical forms (Deepak Foundation)
-  7. DPR                      Daily progress reporting web system
-`,
-      "audit --project sppl": () => `
-[GxP AUDIT TRACE: Suleshvari Pharma Private Ltd. (SPPL ERP)]
-  • Regulatory Scope: US FDA 21 CFR Part 11, EU GMP Annex 11, Revised Schedule M
-  • Batch Records: MPCR transitioned to BPCR plant terminology standard (SPPL-82) [PASS]
-  • QA Quarantine Gate: Mandatory lot quarantine before repack issuance (SPPL-40) [PASS]
-  • Stock Cutover: Single cut-off date 30-Sep-2026 enforced for inventory ledger (SPPL-144) [PASS]
-  • Deviation Decoupling: Out-of-Trend (OOT) forms isolated from generic plant incidents (SPPL-184) [PASS]
-  • Protocol Sign-Off: Modular OQ v4.0 execution standard (FO_OQ_001) verified [PASS]
-  • Overall Completion: 178 of 186 stories delivered (95.7%)
-`,
-      "audit --project linq": () => `
-[POLICY AUDIT TRACE: LinQ Enterprise HRMS (LN & LD)]
-  • Leave Accrual Rule: Mid-month hires after 15th do not accrue initial month credits (LN-2) [PASS]
-  • Financial Guardrail: Petty cash monthly budget capping card active (LN-105) [PASS]
-  • Attendance Validation: WFH requests coupled with biometric punch logs (LN-97) [PASS]
-  • Org Chart Hierarchy: Direct click-to-reassign reporting managers (LD-17) [PASS]
-  • Security Deposit Gate: Notice period verification required for exit refunds (LD-64) [PASS]
-  • Backlog Delivery: 108/108 stories (LN) + 68/68 stories (LD) = 100% complete [PASS]
-`,
-      telemetry: () => `
-Active System Telemetry:
-  • SPPL ERP: 95.7% (178 Done / 8 Open) · In Qualification Round R6
-  • LinQ NS: 100% (108 Done / 0 Open) · Production Deployed
-  • Linq DS: 100% (68 Done / 0 Open) · Client Accepted & Trained
-  • PO Copilot: 28 Unit Tests Passing in 0.895s · Zero Hallucination Mode Active
-`,
-      certifications: () => `
-Education & Simulation Credentials:
-  1. Bachelor of Computer Applications (BCA) - The Maharaja Sayajirao University of Baroda (2022 - 2025)
-  2. Cybersecurity Analyst Job Simulation - Tata Group (Forage)
-  3. Data Analytics Job Simulation - Deloitte Australia (Forage)
-`,
-      contact: () => `
-Direct Communication Channels:
-  • Email: parmarviral397@gmail.com
-  • Phone: +91 6351493983
-  • LinkedIn: https://linkedin.com/in/parmar-viral-13m711
-  • GitHub: https://github.com/Deady007
-  • Resume PDF: Available via header button or /Viral_Parmar_Resume.pdf
-`
-    };
-
-    function handleConsoleSubmit(e) {
-      e.preventDefault();
-      const rawInput = consoleInput.value.trim();
-      if (!rawInput) return;
-
-      const userLine = document.createElement('div');
-      userLine.innerHTML = `<span class="prompt-symbol">guest@vp-portfolio:~$</span> <span>${escapeHtml(rawInput)}</span>`;
-      consoleOutput.appendChild(userLine);
-
-      const cmd = rawInput.toLowerCase();
-      if (cmd === 'clear') {
-        consoleOutput.innerHTML = '';
-      } else if (commands[cmd]) {
-        const responseDiv = document.createElement('div');
-        responseDiv.style.whiteSpace = 'pre-wrap';
-        responseDiv.style.color = 'var(--color-ink)';
-        responseDiv.textContent = commands[cmd]().trim();
-        consoleOutput.appendChild(responseDiv);
-      } else {
-        const errDiv = document.createElement('div');
-        errDiv.style.color = 'var(--color-bad)';
-        errDiv.textContent = `Command not recognized: "${rawInput}". Type "help" for a list of commands.`;
-        consoleOutput.appendChild(errDiv);
-      }
-
-      consoleInput.value = '';
-      consoleBody.scrollTop = consoleBody.scrollHeight;
-    }
-
-    function escapeHtml(str) {
-      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-  </script>
+  <script src="js/themes-data.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/console.js"></script>
 </body>
 </html>

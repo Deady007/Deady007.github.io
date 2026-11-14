@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="brutal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viral Parmar | Brutal Portfolio</title>
+  <meta name="description" content="Viral Parmar Portfolio styled in Hallmark Brutal (editorial) theme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,400..700;1,400..700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Chakra+Petch:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@500;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    /* Hallmark: Brutal (brutal) | genre: editorial | stand-alone portfolio */
+    :root {
+      color-scheme: light;
+      --color-paper: oklch(97.5% 0.006 95); --color-paper-2: oklch(94% 0.007 95); --color-paper-3: oklch(89.5% 0.008 95);
+  --color-ink: oklch(10% 0.006 95); --color-ink-2: oklch(16% 0.006 95); --color-muted: oklch(40% 0.008 95);
+  --color-rule: oklch(10% 0.006 95);
+  --color-accent: oklch(90% 0.19 105); --color-accent-ink: oklch(10% 0.006 95); --color-focus: oklch(48% 0.1 110);
+  --font-display: "Libre Franklin", ui-sans-serif, system-ui, sans-serif; --font-body: var(--font-display);
+  --font-outlier: var(--font-display);
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 3px; --shadow-card: none;
+  --tracking-display: -0.03em; --display-weight: 900;
+    }
+    .theme-banner {
+      background-color: var(--color-paper-2);
+      border-bottom: var(--rule-hair, 1px) solid var(--color-rule);
+      padding: var(--space-xs) var(--space-md);
+      font-size: 0.8125rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+  </style>
+</head>
+<body>
+  <!-- Theme Banner -->
+  <div class="theme-banner">
+    <div>
+      <a href="../themes.html" style="font-weight: 600; text-decoration: underline;">Back to 50 Themes Showcase</a>
+      <span style="margin-inline: var(--space-xs); color: var(--color-muted);">|</span>
+      <span>Theme: <strong>Brutal</strong> (editorial)</span>
+    </div>
+    <div>
+      <select onchange="window.location.href = this.value + '.html'" style="padding: var(--space-3xs) var(--space-xs); border: var(--rule-hair, 1px) solid var(--color-rule); border-radius: var(--radius-pill); background: var(--color-paper);">
+        <option value="almanac" >Almanac (editorial)</option><option value="arcade" >Arcade (playful)</option><option value="atelier" >Atelier (editorial)</option><option value="bloom" >Bloom (atmospheric)</option><option value="blueprint" >Blueprint (modern-minimal)</option><option value="broadside" >Broadside (editorial)</option><option value="brutal" selected>Brutal (editorial)</option><option value="carnival" >Carnival (editorial)</option><option value="cobalt" >Cobalt (modern-minimal)</option><option value="console" >Console (modern-minimal)</option><option value="coral" >Coral (modern-minimal)</option><option value="darkroom" >Darkroom (atmospheric)</option><option value="dose" >Dose (modern-minimal)</option><option value="dusk" >Dusk (modern-minimal)</option><option value="editorial" >Editorial (editorial)</option><option value="formwork" >Formwork (editorial)</option><option value="furrow" >Furrow (modern-minimal)</option><option value="garden" >Garden (editorial)</option><option value="grid" >Grid (editorial)</option><option value="halftone" >Halftone (playful)</option><option value="hedgerow" >Hedgerow (editorial)</option><option value="hum" >Hum (playful)</option><option value="ink" >Ink (editorial)</option><option value="kiln" >Kiln (atmospheric)</option><option value="loom" >Loom (editorial)</option><option value="lumen" >Lumen (atmospheric)</option><option value="manifesto" >Manifesto (editorial)</option><option value="midnight" >Midnight (atmospheric)</option><option value="newsprint" >Newsprint (editorial)</option><option value="overprint" >Overprint (playful)</option><option value="pasteup" >Paste-up (playful)</option><option value="piste" >Piste (playful)</option><option value="refract" >Refract (atmospheric)</option><option value="ribbon" >Ribbon (atmospheric)</option><option value="rim" >Rim (modern-minimal)</option><option value="riso" >Riso (editorial)</option><option value="solstice" >Solstice (editorial)</option><option value="specimen" >Specimen (editorial)</option><option value="spore" >Spore (atmospheric)</option><option value="sport" >Sport (editorial)</option><option value="squeeze" >Squeeze (playful)</option><option value="sticker" >Sticker (playful)</option><option value="studio" >Studio (editorial)</option><option value="terminal" >Terminal (atmospheric)</option><option value="terrazzo" >Terrazzo (modern-minimal)</option><option value="ultraviolet" >Ultraviolet (modern-minimal)</option><option value="vantage" >Vantage (modern-minimal)</option><option value="vellum" >Vellum (editorial)</option><option value="wayfind" >Wayfind (modern-minimal)</option><option value="werkstatt" >Werkstatt (playful)</option>
+      </select>
+    </div>
+  </div>
+
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link">
+        <span class="status-indicator"></span>
+        <span class="brand-name">Viral Parmar</span>
+        <span class="brand-role">Systems & BA</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav">
+        
+    <a href="index.html" class="nav-link active">Overview</a>
+  
+    <a href="projects.html" class="nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="nav-link ">Terminal</a>
+  
+    <a href="about.html" class="nav-link ">About</a>
+  
+    <a href="themes.html" class="nav-link ">50 Themes</a>
+  
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-trigger-btn" id="theme-trigger-btn" aria-label="Open Hallmark Theme Switcher">
+          <span>Theme:</span>
+          <span class="theme-current-label" id="current-theme-name">Console</span>
+        </button>
+
+        <a href="../Viral_Parmar_Resume.pdf" download class="btn btn--sm">Resume</a>
+
+        <button type="button" class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <span class="brand-name">Viral Parmar</span>
+      <button type="button" class="theme-drawer-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      
+    <a href="index.html" class="mobile-nav-link active">Overview</a>
+  
+    <a href="projects.html" class="mobile-nav-link ">Projects</a>
+  
+    <a href="compliance.html" class="mobile-nav-link ">Compliance & GxP</a>
+  
+    <a href="agile-po.html" class="mobile-nav-link ">Agile PO</a>
+  
+    <a href="console.html" class="mobile-nav-link ">Terminal</a>
+  
+    <a href="about.html" class="mobile-nav-link ">About</a>
+  
+    <a href="themes.html" class="mobile-nav-link ">50 Themes</a>
+  
+    </div>
+  </aside>
+
+  <!-- Theme Switcher Drawer Modal -->
+  <div class="theme-drawer-backdrop" id="theme-drawer-backdrop"></div>
+  <aside class="theme-drawer" id="theme-drawer" role="dialog" aria-modal="true" aria-label="Hallmark Theme Selector">
+    <div class="theme-drawer-header">
+      <div>
+        <h3 class="theme-drawer-title">Hallmark 50 Themes</h3>
+        <p class="theme-drawer-desc">Select any of the 50 Hallmark design themes to apply across the entire site instantly.</p>
+      </div>
+      <button type="button" class="theme-drawer-close" id="theme-drawer-close" aria-label="Close theme switcher">✕</button>
+    </div>
+
+    <div class="theme-drawer-controls">
+      <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes, fonts, genres...">
+      <div class="theme-genre-tabs" id="theme-genre-tabs">
+        <button class="genre-tab active" data-genre="all">All (50)</button>
+        <button class="genre-tab" data-genre="modern-minimal">Modern Minimal (12)</button>
+        <button class="genre-tab" data-genre="editorial">Editorial (20)</button>
+        <button class="genre-tab" data-genre="atmospheric">Atmospheric (9)</button>
+        <button class="genre-tab" data-genre="playful">Playful (9)</button>
+      </div>
+    </div>
+
+    <div class="theme-drawer-grid" id="theme-drawer-grid"></div>
+
+    <div class="theme-drawer-footer">
+      <button type="button" class="btn btn--sm" id="random-theme-btn">Pick Random Theme</button>
+      <a href="../themes.html" class="link-discrete" style="font-size: 0.8125rem; color: var(--color-muted);">Browse 50 themes directory</a>
+    </div>
+  </aside>
+  
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 class="hero-title">Viral Parmar</h1>
+          <div class="hero-subhead">Business analyst, cybersecurity candidate, and full-stack systems engineer</div>
+
+          <div class="hero-badge">
+            <span class="status-indicator"></span>
+            <span>Hallmark Theme: Brutal</span>
+          </div>
+
+          <p class="hero-lead">
+            Translating enterprise requirements into deterministic stories, electronic records, and access-governed workflows.
+          </p>
+
+          <div class="hero-cta">
+            <a href="../projects.html" class="btn btn--primary">Enterprise Projects</a>
+            <a href="../compliance.html" class="btn">GxP Compliance</a>
+            <a href="../Viral_Parmar_Resume.pdf" download class="btn">Resume PDF</a>
+          </div>
+        </div>
+
+        <div class="surface">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span class="measured" style="font-size: 0.8125rem; color: var(--color-muted);">Verified telemetry</span>
+            <span class="chip chip--accent">BCA 2025</span>
+          </div>
+          <div class="telemetry-grid">
+            <div class="telemetry-item">
+              <div class="telemetry-num measured">50+</div>
+              <div class="telemetry-label">GitHub repositories (@Deady007)</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-num measured">95.7%</div>
+              <div class="telemetry-label">SPPL ERP completion (178/186)</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-num measured">100%</div>
+              <div class="telemetry-label">LinQ HRMS delivery (176 stories)</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-num measured">28 Tests</div>
+              <div class="telemetry-label">PO Copilot unit suite (0.895s)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Key enterprise systems</h2>
+          <p class="section-desc">Sample systems delivered across pharmaceutical ERP, enterprise HRMS, and developer tools.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="project-card">
+            <h3 class="project-card-title">PO Copilot Desktop</h3>
+            <p class="project-card-desc">Desktop PO application with SQLite WAL mode persistence, 21 CFR Part 11 electronic signatures, and 28 unit tests.</p>
+            <a href="../projects.html#po-copilot" class="btn btn--sm">View Specs</a>
+          </article>
+          <article class="project-card">
+            <h3 class="project-card-title">SPPL Pharma ERP</h3>
+            <p class="project-card-desc">Batch manufacturing execution system handling MPCR/BPCR transitions, QA quarantine gates, and OOT deviation handling.</p>
+            <a href="../compliance.html" class="btn btn--sm">View Audit Trail</a>
+          </article>
+          <article class="project-card">
+            <h3 class="project-card-title">LinQ Enterprise HRMS</h3>
+            <p class="project-card-desc">176 delivered user stories with biometric attendance coupling, petty cash capping, and reporting hierarchy management.</p>
+            <a href="../projects.html#linq" class="btn btn--sm">View Specs</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal -->
+    <section class="section" style="border-top: var(--rule-hair, 1px) solid var(--color-rule);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Interactive terminal console</h2>
+        </div>
+        <div class="terminal-window" id="portfolio-terminal">
+          <div class="terminal-bar">
+            <span class="measured">viral@security-audit-console: ~</span>
+            <span class="chip chip--accent" style="font-size: 0.6875rem;">Online</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-output">
+              <div>Viral Parmar Telemetry Console [Version 2.0.0]</div>
+              <div>Type <span style="color: var(--color-accent); font-weight: 600;">help</span> to inspect available commands.</div>
+            </div>
+            <form class="terminal-form">
+              <span class="prompt-tag">guest@vp-portfolio:~$</span>
+              <input type="text" class="terminal-input" placeholder="help, repos, audit --project sppl..." autocomplete="off" spellcheck="false">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight: 600; color: var(--color-ink);">Viral Parmar</span>
+        <span style="margin-inline: 8px;">(Vadodara, Gujarat, India)</span>
+        <span class="measured">parmarviral397@gmail.com</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Deady007" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parmar-viral-13m711" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="tel:6351493983">+91 6351493983</a>
+        <a href="../Viral_Parmar_Resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="../js/themes-data.js"></script>
+  <script src="../js/theme-switcher.js"></script>
+  <script src="../js/console.js"></script>
+</body>
+</html>
