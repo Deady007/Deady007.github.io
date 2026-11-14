@@ -87,6 +87,20 @@ Focus: Software engineering, GxP CSV data integrity, and cybersecurity monitorin
         `\n\nType "theme <slug>" to activate any theme immediately.`;
     },
 
+    hare: () => {
+      const artBox = document.querySelector('[data-art="hare"]');
+      if (artBox && artBox.pulseHare) {
+        artBox.pulseHare();
+      }
+      return `(\\(\\
+( -.-)  * Terminal ASCII Hare pulse activated!
+o_(")(")  Illuminating glyph canvas with telemetry dotfiles.`;
+    },
+
+    bunny: () => {
+      return commands.hare();
+    },
+
     contact: () => `Direct Communication Channels:
   • Email: parmarviral397@gmail.com
   • Phone: +91 6351493983
